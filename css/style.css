@@ -1,0 +1,1961 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Stanberry";
+    src: url(stanberry.ttf);
+
+    font-family: "corbel";
+    src: url(corbel.ttf);
+}
+
+/* ----------- Estilo general ---------------- */
+
+/* INICIO - ESTILOS */
+/* Barra noticias y envíos */
+
+.noticias{
+    background-color: #fe76a6;
+    height: 40px;
+    width: 100vw;
+}
+
+.noticias p{
+    color: white;
+    font-family: "corbel";
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14pt;
+}
+
+
+/* Inicio encabezado */
+
+.encabezado{
+    background-color: white;
+}
+
+.buscador{
+    background-color: rgb(239, 239, 239);
+    border-radius: 50px;
+    border-color: rgb(232, 232, 232);
+}
+
+/* Inicio menú */
+
+.menu {
+    background-color: white;
+    
+}
+
+.menu ul {
+    list-style: none;
+    text-align: center;
+
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-family: "corbel";
+    font-size: 22px;
+    color: rgb(142, 142, 142);
+    
+}
+
+.menu ul li a:hover {
+    background: #b24aa6;
+    color: white;
+}
+
+/* Inicio Categorias */
+
+h3 {
+    font-family: "corbel";
+    color: grey;
+    text-align: center;
+    
+}
+
+
+/* Inicio Newslatter */
+
+.contenedorNewsletter {
+    background-color: #b24aa6;
+    height: 300px;
+}
+
+.infoNewsletter div h4 {
+    font-family: "stanberry";
+    color: white;
+ 
+}
+
+.infoNewsletter div p {
+    font-family: "corbel";
+    color: white;
+}
+
+
+.ingresarEmail {
+    width: 75%;
+    height: 100%;
+    margin-right: 1%;
+    background-color: white;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 16pt;
+    color: grey;
+}
+
+.BotonInscribete {
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    border-style: none;
+    font-family: "corbel";
+    font-weight: bold;
+    font-size: 16pt;
+    color: #54252e;
+}
+
+
+/* Inicio Footer */
+
+.tresColumnas{
+    font-family: "corbel";
+}
+
+.tresColumnas ul h5 {
+    font-size: 16pt;
+    font-weight: bold;
+    color: rgb(50, 50, 50);
+    margin-bottom: 10px;
+}
+
+.tresColumnas ul li {
+    list-style: none;
+    font-size: 14pt;
+    color: rgb(50, 50, 50);
+}
+
+.columnasFooter3 a {
+    font-size: 30px;
+    color: #b24aa6;
+    padding: 3px
+}
+
+/* Inicio Copyright */
+
+.copyright {
+    background-color: #fe76a6;
+    font-family: "corbel";
+    color: white;
+    text-align: center;
+}
+
+/* BIENVENIDA - ESTILOS */
+
+/* Corresponde a todos los h1 del sitio */
+h1 {
+    font-family: "stanberry";
+    color: grey;
+    font-size: 2em;
+}
+
+.bievenida p {
+    background-color: #fe76a6;
+    font-family: "corbel";
+    color: white;
+}
+
+
+/* CATEGORIAS - ESTILOS */
+
+/* Poleras */
+
+.infoPoleras p {
+    background-color: #fe76a6;
+    font-family: "corbel";
+    color: white;
+}
+
+.infoPoleras iframe {
+    border-radius: 15px;
+}
+
+.medidas h2 {
+    font-family: "corbel";
+    color: grey;
+}
+
+.medidas img {
+    border-radius: 25px;
+}
+
+/* Tabla de medidas */
+
+.medidas table {
+    background-color: bisque;
+    display: inline-block;
+    margin: 15px;
+    border-spacing: 0;
+    border: #54252e solid 5px;
+    border-radius: 15px;
+    font-family: "corbel";
+    font-size: 14pt;
+}
+
+.medidas table tr {
+    width: 100%;
+}
+
+.medidas table tr th {
+    padding: 10px;
+    border-bottom: #54252e solid 3px;
+}
+
+.medidas table td {
+    padding: 5px;
+    border-bottom: #54252e solid 3px;
+}
+
+.contenedorGaleria h2 {
+    font-family: "corbel";
+    font-weight: bold;
+    color: grey;
+}
+
+
+.filtroGaleria label {
+    font-family: "corbel";
+    font-size: 12pt;
+    font-style: italic;
+    color: grey;
+}
+
+.filtroGaleria select {
+    background-color: pink;
+
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #54252e;
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 2%;
+    outline: 0;
+    cursor:pointer;
+    appearance: none;
+}
+
+.flechaFiltro {
+    background-color: lightpink;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 8%;
+    right: 0%;
+    border-radius: 0px 5px 5px 0px;
+    pointer-events: none;
+}
+
+.flechaFiltro .fa-chevron-down {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: white;
+    font-size: 20px;
+}
+
+.resultadosGaleria {
+    font-family: "corbel";
+    font-weight: 700;
+    color: grey;
+}
+
+.item {
+    background-color: rgb(239, 239, 239);
+    display: inline-block;
+    text-align: center;
+    border: rgb(239, 239, 239) solid 2px;
+    border-radius: 15px;
+}
+
+.item img {
+    display: block;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.item p {
+    display: block;
+    padding: 5%;
+}
+
+.item a {
+    text-decoration: none;
+    font-family: "corbel";
+    font-size: 16pt;
+    font-weight: bold;
+    color: #54252e;
+}
+
+
+/* NOVEDADES - ESTILOS*/
+
+.contenedorNovedades {
+    background-color: pink;
+}
+
+.novedad {
+    background-color: white;
+}
+
+.imagenNovedad {
+    background-color: #fe76a6;
+}
+
+.novedadTitulo {
+    font-family: "corbel";
+    font-weight: bolder;
+    color: #54252e;
+}
+
+.preview {
+    font-family: "corbel";
+    color: #54252e;
+}
+
+.leerNovedad {
+    font-family: "corbel";
+    font-weight: bold;
+    color: #b24aa6;
+}
+
+
+.masNovedades {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "corbel";
+    font-size: 20pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #b24aa6;
+    margin: 20px;
+}
+.newsletterNovedades{
+    margin-bottom: 5em;
+}
+
+
+/* CONTACTO ESTILOS */
+
+/* Contacto Información */
+
+.emailRedessociales h2 {
+    font-family: "corbel";    
+    font-weight: bold;
+}
+
+.emailRedessociales p {
+    font-family: "corbel";    
+}
+
+.contactoEmail {
+    font-style: italic;
+    font-weight: bold;   
+}
+
+.redesContacto a {
+    text-decoration: none;
+}
+
+.formularioContacto fieldset {
+    border-style: none;
+}
+
+.formularioContacto fieldset label {
+    font-family: "corbel";
+    font-weight: 700;
+    color: white;    
+}
+
+.formularioContacto fieldset input {
+    border-style: none;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.formularioContacto textarea {
+    border-style: none;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.inputCheckbox {
+    height: 1.5em;
+    width: 1.5em;
+    opacity: 0.7;
+}
+
+.labelCheckbox {
+    font-family: "corbel";
+    font-weight: 600;
+    color: white;
+}
+
+
+
+.labelCheckbox a {
+    text-decoration: none;
+    color: #ffdcb2;
+}
+
+.botonFormContacto {
+    margin-right: 10px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: "corbel";
+    font-weight: bold;
+    color: #54252e;
+}
+
+
+
+
+/* Pantalla desde 480px */
+@media screen and (min-width:480px) and (max-width:1199px) {
+
+
+    .grilla{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 0px 0px;
+        
+        grid-template-areas: "header"
+    "main"
+    "footer";
+    }
+
+    header{
+        grid-area: header;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        width: 100vw;
+    }
+
+
+
+    /* INICIO */
+
+    /* Barra noticias y envíos */
+
+    .noticias{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Inicio encabezado */
+
+    .encabezado{
+        
+        padding-bottom: 14rem;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 60%, 40%;
+        gap: 10px;
+        height: 200px;
+        width: 100%;        
+    }
+
+    .contenedorBotonMenu{
+        grid-column: 1/2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 1em;
+    }
+
+    .fa-bars:hover{
+        background-color: #fe76a6;
+        color: white;
+    }
+
+    #botonMenu{
+        display: none;
+    }
+
+    .fa-bars{
+        color: grey;
+        font-size: 30px;
+        padding: 0.5em;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contentLogoEncabezado{
+        grid-column: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoEncabezado{
+        height: 150px;
+    }
+    
+
+    .contenedorBuscador{
+        grid-area: 2/1/3/4;
+        display: flex;    
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .buscador{
+        width: 85%;
+        margin: 0px 2em;
+    }
+
+    .fa-magnifying-glass {
+        color: grey;
+        margin-left: 20px;
+    }
+    
+    .ingresarBusqueda {
+        font-size: 12pt;
+        border-style: none;
+        background: none;
+        margin: 10px;
+    }
+
+    .iconosEncabezado{
+        margin-right: 1em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .fa-user {
+        color: grey;
+        font-size: 25px;
+        padding: 0.5em;
+        
+    
+    }
+    
+    .fa-bag-shopping {
+        color: grey;
+        font-size: 25px;
+        padding-right: 0.5em;
+        
+       
+    
+    }
+
+    /* Inicio menú */
+
+    .menu{
+        position: absolute;
+        top: 10em;
+        border: none;
+        margin-left: -70%;
+        transition: all 0.5s;
+        
+        
+    }
+
+    .menu ul{
+        flex-direction: column;
+        text-align: start;
+        
+    }
+
+    .menu ul li{
+        width: 100%;      
+    }
+
+    .menu ul li a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 0.5em 0.5em;
+
+
+    }
+    
+    .menu ul li ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 8.55em;
+        top: 7em;
+        background: white;
+        width: 100%px;
+        display: none;
+        z-index: 2;
+        text-align: start;
+    }
+    
+    .menu ul li:hover>ul {
+        display: block;
+    }
+
+
+    .menu ul li ul li a{
+        padding: 0.5em 1.5em;
+    }
+    
+    .menu ul li ul li a:hover {
+        background:#fe76a6;
+        width: 100%;
+    }
+
+    #botonMenu:checked ~ .menu {
+        position: absolute;
+        top: 10em;
+        margin-left: 1em;
+    }
+
+
+    /* INICIO CARRUSEL */
+    
+    .contenedorCarrusel {
+        height: 6%;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .itemCarrusel {
+        height: 100%;
+        position: relative;
+    }
+    
+    .tarjetaCarrusel {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .flechasCarrusel {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    .fa-solid.fa-chevron-left {
+        color: white;
+        font-size: 30px;
+    }
+    
+    .fa-solid.fa-chevron-right {
+        color: white;
+        font-size: 30px;
+    }
+    
+    .puntosCarrusel {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .fa-solid.fa-circle {
+        color: rgb(177, 177, 177);
+        font-size: 15px;
+    }
+    
+    .imgCarrusel {
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* INICIO CATEGORIAS */
+
+    /* corresponde a todos los h3 de index */
+    h3 {
+        font-size: 2em;
+        padding: 1.5em 0px 1em 0px;   
+    }
+
+    .imagenesCategoria{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .imgCateg{
+       margin: 1em;
+    }
+
+    .imgCateg a input{
+        width: 12em;
+        border-radius: 15px;
+    }
+
+    /* INICIO EXTRAS */
+
+    .dosExtras {
+        width: 100%;
+        margin-bottom: 5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .extra {
+        padding: 0px 10px;
+        margin: 0px 0px 1.5em;
+        position: relative;
+    }
+    
+    .extra img {
+        width: 25em;
+        border-radius: 20px;
+    }
+    
+    .extra div {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .extra div a input {
+        height: 50px;
+        width: 200px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 3px;
+        border-color: #b24aa6;
+        background-color: white;
+        font-family: "stanberry";
+        font-size: 16pt;
+        font-weight: bold;
+        color: #b24aa6;
+    }
+
+    /* INICIO NEWSLETTER */
+
+    .contenedorNewsletter{
+        height: auto;
+        padding: 0.5em 0px 1em 0px;
+
+    }
+
+    .imgInfoNewsletter{
+        display: block;
+        text-align: center;
+    }
+
+    .imgNewsletter{
+        height: auto;
+        /* border: #54252e solid 5px; */
+        text-align: center;
+    }
+   
+
+    .imgNewsletter img{
+        height: 15em;
+    }
+
+    .infoNewsletter h4{
+        font-size: 2em;
+    }
+    
+    .infoNewsletter p{
+        font-size: 1.3em;
+    }
+
+    .formularioNewsletter{
+        padding: 1em;
+    }
+
+    .ingresarEmail{
+        height: 2em;
+    }
+
+    .BotonInscribete{
+        height: 2.5em;
+        font-size: 1.1em; 
+    }
+
+    /* Espacio sobrante de Main no identificado (se observó grilla y no hay elementos desbordados*/
+    .newsletterIndex{
+        margin-bottom: -250px;
+    }
+    
+    /* INICIO FOOTER */
+
+    .tresColumnas{
+        display: block;
+        padding-left: 1em;
+    }
+
+    .tresColumnas ul {
+        margin-bottom: 2em;
+    }
+
+    .tresColumnas ul li{
+        padding: 5px 0px;
+    }
+
+    /* COPYRIGHT */
+
+.copyright {
+    height: 3em;
+    font-size: 1.5;
+}
+
+.copyright p {
+    padding-top: 1em;
+}
+
+/* BIENVENIDA */
+
+h1 {
+    text-align: center;
+    padding: 1em 0px 0.5em 0px;  
+}
+
+.bievenida{
+    margin: 0px 0px 5em 0px;
+    height: 100%;
+
+}
+.contenedorImagenBienvenida{
+    text-align: center;
+    margin: 0.5em 0px;
+}
+.contenedorImagenBienvenida img{
+    height: 20em;
+}
+
+.bievenida p{
+    font-size: 1.5em;
+    padding: 2em 2em;
+    height: 15em;
+}
+
+.bordeBienvenida {
+    height: 20em;
+    width: 95%;
+    border: solid white 4px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 113%);
+}
+
+/* CATEGORIAS */
+/* Poleras */
+
+.infoPoleras{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1em 0px 3em 0px;
+}
+.infoPoleras p {
+    font-size: 1.3em;
+    line-height: 1.1em;
+    text-align: left;
+    padding: 1.5em;
+}
+
+.infoPoleras iframe {
+    width: 100%;
+    border:pink solid 5px;
+    margin-bottom: 0.5em;
+}
+
+
+.contenedorMedidas {
+    height: auto;
+}
+
+.medidas {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.medidas h2 {
+    width: 100%;
+    padding-top: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.medidas img {
+    width: 25em;
+}
+
+/* Tabla de medidas */
+
+.tablaMujer{
+    width: 25em;
+}
+.medidas table {
+    margin-bottom: 3em;
+}
+
+
+.medidas table td {
+    padding: 5px;
+    border-bottom: #54252e solid 3px;
+}
+
+/* Galerìa */
+.contenedorGaleria {
+    display: flex;
+    flex-flow: wrap;
+    margin: 5em 0px;
+}
+
+.contenedorGaleria h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.filtroGaleria {
+    width: 100%;
+    height: auto;
+    padding: 1.5em 0px;
+    text-align: center;
+}
+
+.filtroGaleria label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.filtroGaleria select {
+    display: inline-block;
+    height: 4em;
+    width: 50%;
+    position: relative;
+ 
+}
+
+.flechaFiltro {
+    display: inline-block;
+    height: 4em;
+    width: 8%;
+    position: absolute;
+    right: 23.5%;
+}
+
+
+
+.resultadosGaleria {
+    width: 100%;
+    text-align: center;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item {
+    margin: 1em;
+
+}
+
+.item img {
+    width: 9em;
+}
+
+.item p {
+    display: block;
+    padding: 5%;
+}
+
+.item a {
+    text-decoration: none;
+    font-family: "corbel";
+    font-size: 16pt;
+    font-weight: bold;
+    color: #54252e;
+}
+
+
+
+/* NOVEDADES */
+
+.contenedorNovedades {
+    display: block;
+    height: auto;
+    padding: 3em 0px;
+}
+
+.novedad {
+    height: auto;
+    text-align: center;
+    margin: 1.5em 0px;
+}
+
+.imagenNovedad {
+    height: auto;
+}
+.imagenNovedad img{
+    height: 350px;
+}
+
+.novedadPreview{
+    padding: 1em 0px;
+}
+
+.novedadTitulo {
+    font-size: 2em;
+}
+
+.preview {
+    font-size: 1.3em;
+    line-height: 1.2em;
+    padding: 0 1em;
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.leerNovedad {
+    font-size: 1em;
+    margin-bottom: 50px;
+}
+
+
+.masNovedades {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: "corbel";
+    font-size: 20pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #b24aa6;
+    margin: 20px;
+}
+.newsletterNovedades{
+    margin-bottom: 5em;
+}
+
+/* CONTACTO */
+
+/* Contacto Información */
+
+.emailRedessociales{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.emailRedessociales h2 {
+    color: #54252e;
+    font-size: 1.5em;
+    margin-bottom: 0.5em; 
+}
+
+.emailRedessociales p {
+    color: #54252e;
+    font-size: 1.3em;
+    
+}
+
+.contactoEmail {
+    padding: 1em 0px;   
+}
+
+.redesContacto a {
+    text-decoration: none;
+    font-size: 2em;
+    color: #fe76a6;
+}
+
+.formularioContacto{
+    display: block;
+    background-color: #b24aa6;
+    padding: 2em;
+    margin-bottom: 5em;
+}  
+
+.formularioContacto fieldset label {
+    display: block;
+    font-size: 16pt;
+    margin: 0.5em 0 5px 0;
+    
+}
+
+.formularioContacto fieldset input {
+    display: block;
+    width: 100%;
+    height: 3em;
+}
+
+.formularioContacto textarea {
+    display: block;
+    width: 100%;
+    height: 10em;
+    margin-bottom: 1.5em;
+}
+
+.checkNoticiasOfertas{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.inputCheckbox {
+   margin-right: 0.5em;
+   
+}
+
+
+.labelCheckbox {
+    font-size: 14pt;
+}
+
+.tyc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.botonFormContacto {
+    width: auto;
+    height: 2em;
+    padding: 0px 1em;
+    font-size: 16pt;
+    
+}
+    
+}
+
+
+
+
+/* -------------- Pantalla desde 1200px --------------------- */
+@media screen and (min-width:1200px) {
+
+    .grilla{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.088fr auto 1fr;
+        
+        
+        grid-template-areas: "header" "header"
+    "main" "main"
+    "footer" "footer";
+    }
+
+    header{
+        grid-area: header;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+    
+
+/* INICIO */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 8em;
+}
+
+/* Barra noticias y envíos */
+
+.noticias {
+    position: relative;
+}
+
+.noticias p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Inicio encabezado */
+
+
+.encabezado {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 0px 0px ;
+    width: 100vw;
+    height: 8em;   
+}
+
+#botonMenu{
+    display: none;
+}
+
+.contenedorBotonMenu{
+    display: none;
+}
+
+.contentLogoEncabezado{
+    margin-left: 50px;
+}
+.logoEncabezado {
+    height: 100px;
+}
+
+.buscador {
+    height: 40px;
+    width: 700px;
+}
+
+.fa-magnifying-glass {
+    color: grey;
+    margin-left: 20px;
+}
+
+.ingresarBusqueda {
+    font-size: 12pt;
+    border-style: none;
+    background: none;
+    margin: 10px;
+}
+
+.iconosEncabezado{
+    margin-right: 50px;
+}
+.fa-user {
+    color: grey;
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+.fa-bag-shopping {
+    color: grey;
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+/* Inicio menú */
+
+/* Intento con tutorial usando flexbox */
+
+/* .menu {
+    display: flex;
+    justify-content: space-around;
+    border-style: solid;
+    border-color: rgb(166, 166, 166);
+    border-width: 1px 0px;
+    font-size: 50px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+
+} */
+
+.menu{
+    width: 100%;
+    height: 3.8em;
+    display: flex;
+    justify-content: center;
+    border-top: rgb(232, 232, 232) solid 2px;  
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu ul li {
+    display: inline-block;  
+}
+
+.menu ul li a {
+    display: block;
+    padding: 16px 20px;
+}
+
+
+
+.menu ul li ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    width: 180px;
+    display: none;
+    z-index: 2;
+}
+
+.menu ul li:hover>ul {
+    display: block;
+}
+
+.menu ul li ul li a:hover {
+    background: #b24aa6;
+    width: 180px;
+}
+
+
+/* Inicio Carrusel */
+
+.contenedorCarrusel {
+    height: 500px;
+    overflow: hidden;
+}
+
+.itemCarrusel {
+    height: 100%;
+    position: relative;
+}
+
+.tarjetaCarrusel {
+    height: 100%;
+}
+
+.flechasCarrusel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.fa-solid.fa-chevron-left {
+    color: white;
+    font-size: 30px;
+}
+
+.fa-solid.fa-chevron-right {
+    color: white;
+    font-size: 30px;
+}
+
+.puntosCarrusel {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-solid.fa-circle {
+    color: rgb(177, 177, 177);
+    font-size: 15px;
+}
+
+.imgCarrusel {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Categorias */
+
+h3 {
+    font-size: 30pt;
+    padding: 100px 0px 20px 0px;
+}
+
+.imagenesCategoria {
+    text-align: center;
+}
+
+.imgCateg {
+    display: inline-block;
+    padding: 20px;
+}
+
+.imgCateg a input {
+    height: 350px;
+    border-radius: 20px;
+}
+
+
+/* Extras */
+
+.dosExtras {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.extra {
+    display: inline-block;
+    text-align: center;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.extra img {
+    border-radius: 20px;
+}
+
+.extra div {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.extra div a input {
+    height: 50px;
+    width: 200px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: #b24aa6;
+    background-color: white;
+    font-family: "stanberry";
+    font-size: 16pt;
+    font-weight: bold;
+    color: #b24aa6;
+}
+
+
+/* Newsletter */
+
+.contenedorNewsletter {
+    background-color: #b24aa6;
+    height: 300px;
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+    
+}
+
+.imgInfoNewsletter {
+    height: 150px;
+    text-align: center;
+}
+
+.imgNewsletter img {
+    height: 150px;
+    margin-top: 50px;
+}
+
+.imgNewsletter {
+    height: 150px;
+    display: inline-block;
+}
+
+.infoNewsletter {
+    height: 150px;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.infoNewsletter div {
+    height: 100px;
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -50%)
+}
+
+.infoNewsletter div h4 {
+    font-size: 30pt;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.infoNewsletter div p {
+    font-size: 20pt;
+    line-height: 22pt;
+    text-align: left;
+}
+
+.formularioNewsletter {
+    /* background-color: blueviolet; */
+    display: inline-block;
+    margin-top: 60px;
+    height: 50px;
+    width: 60%;
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 80px;
+}
+
+.tresColumnas {
+    /* background-color: springgreen; */
+    height: 250px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    padding-top: 50px;
+}
+
+/* imagen de fondo para tarea */
+/* .tresColumnas{
+    background-image: url("https://media.istockphoto.com/illustrations/abstract-kawaii-colorful-sky-background-soft-gradient-pastel-comic-illustration-id1162695555?k=20&m=1162695555&s=170667a&w=0&h=ekZBY70A0sZyuiMLK9BTax9csBDl4_m0jXwy3XaA3D0=");
+    background-repeat: repeat-x;
+    background-size: contain; 
+} */
+
+.columnasFooter1 {
+    /* background-color: blue; */
+    list-style: none;
+    margin-bottom: 100px;
+    position: absolute;
+    left: 10%;
+    display: inline-block;
+    
+}
+
+.columnasFooter2 {
+    /* background-color: blue; */
+    list-style: none;
+    margin-bottom: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: inline-block;
+    
+}
+
+.columnasFooter3 {
+    /* background-color: blue; */
+    list-style: none;
+    margin-bottom: 100px;
+    position: absolute;
+    right: 10%;
+    display: inline-block;
+    text-align: center; 
+}
+
+.tresColumnas ul li {
+    padding: 5px 0px;
+}
+
+
+/* copyriht */
+
+.copyright {
+    height: 30px;
+    font-size: 12pt;
+}
+
+.copyright p {
+    padding-top: 5px;
+}
+
+/* BIENVENIDA */
+
+h1 {
+    font-size: 25pt;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.bievenida {
+    background-color: #fe76a6;
+    height: 400px;
+    margin: 0px 100px;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+.contenedorImagenBienvenida {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+
+.imagenBienvenida {
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.bievenida p {
+    display: inline-block;
+    position: absolute;
+    height: 50%;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    font-size: 16pt;
+}
+
+.bordeBienvenida {
+    height: 70%;
+    width: 90%;
+    margin: 50x 50px;
+    border: solid white 5px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Categoría Poleras */
+
+.infoPoleras {
+    background-color: #fe76a6;
+    display: inline-block;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.infoPoleras p {
+    display: inline-block;
+    width: 40%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "corbel";
+    font-size: 20px;
+    color: white;
+}
+
+.infoPoleras iframe {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 560px;
+    height: 315px;
+    border-radius: 15px;
+    border: white solid 10px;
+}
+
+
+.contenedorMedidas {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.medidas {
+    display: inline-block;
+}
+
+.medidas h2 {
+    display: block;
+    text-align: left;
+    font-size: 20pt;
+    margin-bottom: 20px;
+    padding-left: 50px;
+}
+
+.medidas img {
+    display: inline-block;
+    height: 320px;
+}
+
+.contenedorGaleria {
+    text-align: center;
+}
+
+.contenedorGaleria h2 {
+    display: inline-block;
+    text-align: start;
+    width: 45%;
+    font-size: 20pt;
+    margin-bottom: 2%;
+}
+
+.filtroGaleria {
+    display: inline-block;
+    width: 45%;
+    position: relative;
+}
+
+.filtroGaleria label {
+    display: inline-block;
+    font-size: 12pt;
+    margin: 3%;
+    padding-left: 25%;
+}
+
+.filtroGaleria select {
+    background-color: pink;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #54252e;
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 2%;
+    outline: 0;
+    cursor:pointer;
+    appearance: none;
+}
+
+.flechaFiltro {
+    background-color: lightpink;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 8%;
+    right: 0%;
+    border-radius: 0px 5px 5px 0px;
+    pointer-events: none;
+}
+
+.flechaFiltro .fa-chevron-down {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: white;
+    font-size: 20px;
+}
+
+.resultadosGaleria {
+    display: block;
+    text-align: left;
+    font-size: 12pt;
+    margin: 0px 0px 5% 5%;
+}
+
+.item {
+    margin: 0px 10px 50px;
+}
+
+.item img {
+    height: 300px;
+}
+
+.item a {
+    font-size: 16pt;
+}
+
+
+/* Novedades */
+
+.contenedorNovedades {
+    display: inline-block;
+    height: 1320px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.novedad {
+    display: block;
+    height: 400px;
+    margin: 30px 25%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.imagenNovedad {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 50%;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.imagenNovedad img {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.novedadPreview {
+    display: inline-block;
+    height: 100%;
+    text-align: left;
+    position: absolute;
+    top: 25px;
+    margin-left: 20px;
+}
+
+.novedadTitulo {
+    font-size: 25pt;
+    margin-bottom: 5%;
+}
+
+.preview {
+    font-size: 16pt;
+    margin-bottom: 50%;
+    padding-right: 2%;
+}
+
+.leerNovedad {
+    font-size: 12pt;
+}
+
+
+/* Contacto */
+
+.contenedorContacto {
+    background-color: #b24aa6;
+    height: 500px;
+    position: relative;
+}
+
+.emailRedessociales {
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.emailRedessociales h2 {
+    font-size: 28pt;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.emailRedessociales p {
+    font-size: 16pt;
+    color: white;
+    margin-left: 15px;
+}
+
+.contactoEmail {
+    margin: 10px 0px 20px 0px;
+}
+
+.redesContacto .fa-facebook {
+    font-size: 35px;
+    color: white;
+    margin: 0px 10px 0px 15px;
+}
+
+.redesContacto .fa-instagram {
+    font-size: 35px;
+    color: white;
+    margin: 0px 10px;
+}
+
+.redesContacto .fa-twitter {
+    font-size: 35px;
+    color: white;
+    margin: 0px 10px;
+}
+
+.formularioContacto {
+    background-color: none;
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.formularioContacto fieldset label {
+    display: block;
+    width: 100%;
+    font-size: 16pt;
+    margin-bottom: 5px;
+}
+
+.formularioContacto fieldset input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.formularioContacto textarea {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.checkNoticiasOfertas{
+    display: flex;
+    align-items: center;
+}
+
+.inputCheckbox {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.labelCheckbox {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14pt;
+}
+
+.tyc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.labelCheckbox a {
+    margin-left: 5px;
+}
+
+.botonFormContacto {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    padding: 0px 1em;
+    font-size: 16pt;
+}
+
+}
