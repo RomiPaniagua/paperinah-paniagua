@@ -15,7 +15,7 @@
 /* ----------- Estilo general ---------------- */
 
 body{
- width: 100vw;
+    width: 100vw;
 }
 
 /* INICIO - ESTILOS */
@@ -25,14 +25,47 @@ body{
     background-color: #fe76a6;
     height: 40px;
     width: 100vw;
+    overflow: hidden;
 }
 
-.noticias p{
+.noticias ul{
+    display: flex;
+    padding: 0;
+}
+
+.noticias li{
+    list-style: none;
     color: white;
     font-family: "corbel";
     font-weight: bold;
     font-style: italic;
     font-size: 14pt;
+}
+
+.noticias{
+    text-align: center;
+    padding-top: 0.5em;
+    width: 100vw;
+    margin: auto;
+}
+
+.noticias ul{
+    width: 300%;
+    animation: slideNoticias 12s infinite alternate ease-in-out;
+}
+.noticias li{
+    width: 100vw;
+}
+
+@keyframes slideNoticias {
+    0% {margin-left: 0;}
+    30% {margin-left: 0;}
+
+    33% {margin-left: -100%;}
+    63% {margin-left: -100%;}
+
+    66% {margin-left: -200%;}
+    100% {margin-left: -200%;}
 }
 
 
@@ -66,6 +99,7 @@ body{
     font-family: "corbel";
     font-size: 22px;
     color: rgb(142, 142, 142);
+    transition: 0.07s;
     
 }
 
@@ -127,6 +161,10 @@ h3 {
 
 
 /* Inicio Footer */
+
+footer{
+    background-image: linear-gradient(to top, #fe76a6, pink, white );
+}
 
 .tresColumnas{
     font-family: "corbel";
@@ -435,7 +473,7 @@ h1 {
 
 
 
-/* Pantalla desde 480px */
+/* Pantalla desde 320px -----------------------------------------------------------------------------------*/
 @media screen and (min-width:320px) and (max-width:767px) {
 
 
@@ -470,15 +508,6 @@ h1 {
 
 
     /* INICIO */
-
-    /* Barra noticias y envíos */
-
-    .noticias{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-    }
 
     /* Inicio encabezado */
 
@@ -715,7 +744,7 @@ h1 {
     }
 
     .imgCateg{
-       margin: 1em;
+        margin: 1em;
     }
 
     .imgCateg a input{
@@ -857,7 +886,7 @@ h1 {
 
 .bievenida{
     margin: 0px 0px 5em 0px;
-    height: 100%;
+    height: auto;
 
 }
 .contenedorImagenBienvenida{
@@ -868,25 +897,36 @@ h1 {
     height: 20em;
 }
 
+/* .bievenida div {
+    height: auto;
+} */
 .bievenida p{
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 2em 2em;
-    height: 15em;
+    height: auto;
+    color: white;
 }
 
 .bordeBienvenida {
-    height: 20em;
+    height: 15em;
     width: 95%;
-    border: solid white 4px;
+    border: solid white 3px;
     border-radius: 15px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 113%);
+    top: 45.3em;
+    left: 0.5em;
+
 }
+
 
 /* CATEGORIAS */
 /* Poleras */
+
+.infoPoleras{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1em 0px 3em 0px;
+}
 
 .infoPoleras{
     display: flex;
@@ -926,14 +966,13 @@ h1 {
 }
 
 .medidas img {
-    width: 25em;
+    width: 20em;
 }
 
 /* Tabla de medidas */
 
-.tablaMujer{
-    width: 25em;
-}
+
+
 .medidas table {
     margin-bottom: 3em;
 }
@@ -942,7 +981,19 @@ h1 {
 .medidas table td {
     padding: 5px;
     border-bottom: #54252e solid 3px;
+    text-align: center;
 }
+
+.tablaMujer{
+    width: 15em;
+}
+
+.tablaMujer tr{
+    font-size: 0.5em;
+    
+}
+
+
 
 /* Galerìa */
 .contenedorGaleria {
@@ -990,6 +1041,7 @@ h1 {
 .resultadosGaleria {
     width: 100%;
     text-align: center;
+    margin-bottom: 1.5em;
 }
 
 .galeria{
@@ -998,12 +1050,12 @@ h1 {
     justify-content: center;
 }
 .item {
-    margin: 1em;
+    margin: 0.5em;
 
 }
 
 .item img {
-    width: 9em;
+    width: 6.5em;
 }
 
 .item p {
@@ -1035,11 +1087,9 @@ h1 {
     margin: 1.5em 0px;
 }
 
-.imagenNovedad {
-    height: auto;
-}
+
 .imagenNovedad img{
-    height: 350px;
+    height: 16em;
 }
 
 .novedadPreview{
@@ -1090,17 +1140,21 @@ h1 {
 .emailRedessociales h2 {
     color: #54252e;
     font-size: 1.5em;
+    line-height: 1.2em;
+    padding: 0 2em;
     margin-bottom: 0.5em; 
 }
 
-.emailRedessociales p {
+.infoEmail {
+    text-align: left;
     color: #54252e;
-    font-size: 1.3em;
-    
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0 1.5em;
 }
 
 .contactoEmail {
-    padding: 1em 0px;   
+    margin: 1.5em 0px;   
 }
 
 .redesContacto a {
@@ -1170,7 +1224,7 @@ h1 {
 
 
 
-/* -------------- Pantalla desde 1200px --------------------- */
+/* -------------- Pantalla desde 1200px --------------------------------------------------------------- */
 @media screen and (min-width:1200px) {
 
     .grilla{
@@ -1207,16 +1261,14 @@ header {
 
 /* Barra noticias y envíos */
 
-.noticias {
-    position: relative;
-}
 
-.noticias p {
+
+/* .noticias p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 
 /* Inicio encabezado */
@@ -1783,16 +1835,26 @@ h1 {
 
 .item {
     margin: 0px 10px 50px;
+    transition: 0.5s;
 }
 
 .item img {
     height: 300px;
+    transition: 0.5s;
 }
 
 .item a {
     font-size: 16pt;
 }
 
+.item img:hover{
+    height: 370px;
+    
+}
+
+.item:hover{
+    box-shadow:  0px 0px 10px rgb(165, 165, 165) ;
+}
 
 /* Novedades */
 
