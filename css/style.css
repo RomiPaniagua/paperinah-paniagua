@@ -85,6 +85,7 @@ body{
 
 .menu {
     background-color: white;
+    border-radius: 5px;
     
 }
 
@@ -106,6 +107,12 @@ body{
 .menu ul li a:hover {
     background: #b24aa6;
     color: white;
+    border-radius: 5px;
+}
+
+.menu ul li ul{
+    color: white;
+    border-radius: 5px;
 }
 
 /* Inicio Categorias */
@@ -339,14 +346,27 @@ h1 {
 .item p {
     display: block;
     padding: 5%;
+    font-weight: 500;
+}
+
+
+.precioItem{
+    display: block;
+    padding: 0%;
+    margin: 0%;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .item a {
     text-decoration: none;
     font-family: "corbel";
     font-size: 16pt;
-    font-weight: bold;
     color: #54252e;
+}
+
+.paginacion{
+    margin-bottom: 5em;
 }
 
 
@@ -569,6 +589,7 @@ h1 {
 
     .buscador{
         width: 90%;
+        
     }
 
 
@@ -614,14 +635,14 @@ h1 {
         top: 10em;
         border: none;
         margin-left: -70%;
-        transition: all 0.5s;
-        
-        
+        transition: all 0.5s; 
+        height: 275px;     
     }
 
     .menu ul{
         flex-direction: column;
         text-align: start;
+        padding: 0%;
         
     }
 
@@ -642,13 +663,14 @@ h1 {
         display: flex;
         flex-direction: column;
         position: absolute;
-        left: 8.55em;
+        left: 8.5em;
         top: 7em;
         background: white;
         width: 100%px;
         display: none;
         z-index: 2;
-        text-align: start;
+        /* text-align: start; */
+        padding: 0%;
     }
     
     .menu ul li:hover>ul {
@@ -663,6 +685,7 @@ h1 {
     .menu ul li ul li a:hover {
         background:#fe76a6;
         width: 100%;
+        border-radius: 5px;
     }
 
     #botonMenu:checked ~ .menu {
@@ -848,12 +871,12 @@ h1 {
 
     /* Espacio sobrante de Main no identificado (se observó grilla y no hay elementos desbordados*/
     .newsletterIndex{
-        margin-bottom: -100px;
+        margin-bottom: 5em;
     }
     
-    /* INICIO FOOTER */
+    /* INICIO FOOTER  - Reemplazado por bootstrap*/
 
-    .tresColumnas{
+/*     .tresColumnas{
         display: block;
         padding-left: 1em;
     }
@@ -865,7 +888,7 @@ h1 {
     .tresColumnas ul li{
         padding: 5px 0px;
     }
-
+ */
     /* COPYRIGHT */
 
 .copyright {
@@ -907,16 +930,6 @@ h1 {
     color: white;
 }
 
-.bordeBienvenida {
-    height: 15em;
-    width: 95%;
-    border: solid white 3px;
-    border-radius: 15px;
-    position: absolute;
-    top: 45.3em;
-    left: 0.5em;
-
-}
 
 
 /* CATEGORIAS */
@@ -1050,8 +1063,8 @@ h1 {
     justify-content: center;
 }
 .item {
+    padding: 0px 0px 0.5em 0px;
     margin: 0.5em;
-
 }
 
 .item img {
@@ -1060,18 +1073,9 @@ h1 {
 
 .item p {
     display: block;
-    padding: 5%;
+    padding: 0%;
+    margin: 0%;
 }
-
-.item a {
-    text-decoration: none;
-    font-family: "corbel";
-    font-size: 16pt;
-    font-weight: bold;
-    color: #54252e;
-}
-
-
 
 /* NOVEDADES */
 
@@ -1256,7 +1260,8 @@ header {
     top: 0;
     z-index: 2;
     width: 100vw;
-    height: 8em;
+    height: 13em;
+    background-color: #b24aa6;
 }
 
 /* Barra noticias y envíos */
@@ -1360,7 +1365,7 @@ header {
     height: 3.8em;
     display: flex;
     justify-content: center;
-    border-top: rgb(232, 232, 232) solid 2px;  
+    border-top: rgb(232, 232, 232) solid 2px;
 }
 
 .menu ul{
@@ -1375,7 +1380,7 @@ header {
 
 .menu ul li a {
     display: block;
-    padding: 16px 20px;
+    padding: 12px 20px;
 }
 
 
@@ -1388,15 +1393,21 @@ header {
     width: 180px;
     display: none;
     z-index: 2;
+    padding: 0%;
 }
 
 .menu ul li:hover>ul {
     display: block;
 }
 
+.menu ul li ul li{
+    width: 100%;
+}
+
 .menu ul li ul li a:hover {
     background: #b24aa6;
     width: 180px;
+    
 }
 
 
@@ -1687,7 +1698,7 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translateY(-50%);
-    font-size: 16pt;
+    font-size: 1.1em;
 }
 
 .bordeBienvenida {
@@ -1738,19 +1749,35 @@ h1 {
     border: white solid 10px;
 }
 
-
+/* Maquetación reemplazada por bootstrap */
+/* 
 .contenedorMedidas {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 100px;
+
+    display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 0px 20px 100px 20px;
+   
+    background-color: #fe76a6;
 }
 
 .medidas {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    
+}
+
+.medidas{
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .medidas h2 {
-    display: block;
+    width: 100%;
     text-align: left;
     font-size: 20pt;
     margin-bottom: 20px;
@@ -1759,7 +1786,17 @@ h1 {
 
 .medidas img {
     display: inline-block;
-    height: 320px;
+    height: 250px;
+    margin-left: 50px;
+}
+
+ */
+
+ .contenedorMedidas{
+    margin-bottom: 100px;
+ }
+.medidas{
+    margin-bottom: 4em;
 }
 
 .contenedorGaleria {
@@ -1835,6 +1872,7 @@ h1 {
 
 .item {
     margin: 0px 10px 50px;
+    padding: 0px 0px 0.5em 0px;
     transition: 0.5s;
 }
 
@@ -1845,6 +1883,16 @@ h1 {
 
 .item a {
     font-size: 16pt;
+}
+
+.item p{
+    margin: 0%;
+    padding: 1% 10%;
+}
+
+.precioItem{
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .item img:hover{

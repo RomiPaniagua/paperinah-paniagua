@@ -69,9 +69,9 @@
         </header>
         <main>
             <!-- Carrusel -->
-            <div class="contenedorCarrusel">
+            <!-- <div class="contenedorCarrusel"> -->
                 <!-- Item Carrusel: Imagen + flechas -->
-                <div class="itemCarrusel" id="itemCarrusel-1">
+               <!--  <div class="itemCarrusel" id="itemCarrusel-1">
                     <div class="tarjetaCarrusel">
                         <img src="./img/carrusel/img-carrusel-01.png" alt="Imagen Carrousel 01" class="imgCarrusel">
                     </div>
@@ -83,9 +83,9 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
                 <!-- Item Carrusel: Imagen + flechas -->
-                <div class="itemCarrusel" id="itemCarrusel-2">
+               <!--  <div class="itemCarrusel" id="itemCarrusel-2">
                     <div class="tarjetaCarrusel">
                         <img src="./img/carrusel/img-carrusel-02.png" alt="Imagen Carrousel 02" class="imgCarrusel">
                     </div>
@@ -97,9 +97,9 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
                 <!-- Item Carrusel: Imagen + flechas -->
-                <div class="itemCarrusel" id="itemCarrusel-3">
+                <!-- <div class="itemCarrusel" id="itemCarrusel-3">
                     <div class="tarjetaCarrusel">
                         <img src="./img/carrusel/img-carrusel-03.png" alt="Imagen Carrousel 03" class="imgCarrusel">
                     </div>
@@ -111,15 +111,42 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
             <!-- Puntos del Carrusel -->
-            <div class="puntosCarrusel">
+           <!--  <div class="puntosCarrusel">
                 <a href="#itemCarrusel-1"><i class="fa-solid fa-circle"></i></a>
                 <a href="#itemCarrusel-2"><i class="fa-solid fa-circle"></i></a>
                 <a href="#itemCarrusel-3"><i class="fa-solid fa-circle"></i></a>
+            </div> -->
 
-            </div>
+            <!-- Carrusel con bootstrap  -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/carrusel/img-carrusel-01.png" class="d-block w-100" alt="Imagen Carrousel 01">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/carrusel/img-carrusel-02.png" class="d-block w-100" alt="magen Carrousel 02">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/carrusel/img-carrusel-03.png" class="d-block w-100" alt="magen Carrousel 03">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             <!-- Categorias -->
             <section class="contenedorCategorias" id="categorias">
                 <h3>CATEGORIAS</h3>
@@ -193,7 +220,7 @@
         </main>
         <footer>
             <!-- Listas/Columnas de informaciòn -->
-            <div class="tresColumnas">
+<!--             <div class="tresColumnas">
                 <ul class="columnasFooter1">
                     <h5>Conócenos</h5>
                     <li>Sobre Paperhinah</li>
@@ -213,8 +240,41 @@
                             class="fa-brands fa-instagram"></i></a>
                     <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                 </ul>
+            </div> -->
+            <!-- Footer con Bootstrap -->
+            <!-- Listas/Columnas de informaciòn -->
+            <div class="container tresColumnas  ">
+                <div class="row">
+                    <ul class="col-sm-4 d-flex justify-content-sm-center">
+                        <div>
+                            <h5>Conócenos</h5>
+                            <li>Sobre Paperhinah</li>
+                            <li>Inah Ilustradora</li>
+                        </div>
+                        
+                    </ul>
+                    <ul class="col-sm-4 d-flex justify-content-sm-center">
+                        <div>
+                            <h5>¿Necesitas ayuda?</h5>
+                        <li>Formas de Pago</li>
+                        <li>Devoluciones y Cambios</li>
+                        <li>Envíos</li>
+                        <li>Preguntas Frecuentes</li>
+                        </div>
+                        
+                    </ul>
+                    <ul class="col-sm-4 d-flex justify-content-sm-center ">
+                        <div class="columnasFooter3">
+                            <h5>Contáctanos</h5>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tienditapaperinah/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        
+                    </ul>
+                </div>
             </div>
-
             <!-- Copyright -->
             <div class="copyright">
                 <p>©Romina Paniagua</p>
