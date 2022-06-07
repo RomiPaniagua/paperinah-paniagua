@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poleras</title>
     <link rel="icon" type="image/x-icon" href="../img/paperinah-imagen-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3d4d3a5137.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -18,16 +19,15 @@
         <div class="noticias">
             <div>
                 <ul>
-                    <li>Noticias</li>
-                    <li>Mensajes express</li>
-                    <li>Horarios de Despacho</li>
+                    <li>Noticias: Inauguramos nuestra tienda con un 15% dscto!!</li>
+                    <li>Ya abrimos nuestra sección Poleras</li>
+                    <li>ENVIOS: Todos los Viernes - Tiempo estimado de entrega 5 días hábiles.</li>
                 </ul>
             </div>
         </div>
         <div class="encabezadoMenu">
             <!-- Encabezado: Checkbox botón Menú responsive - Logo - Buscador - Icono usuario - Icono cesta de compras -->
             <div class="encabezado">
-
                 <input type="checkbox" id="botonMenu">
                 <div class="contenedorBotonMenu">
                     <label for="botonMenu"><i class="fa-solid fa-bars"></i></label>
@@ -36,14 +36,14 @@
                     <img class="logoEncabezado" src="../img/logo.png" alt="Logo Paperinah">
                 </div>
                 <div class="contenedorBuscador">
-                    <form action="" class="buscador">
+                    <form action="" class="buscador d-flex align-items-center">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="search" placeholder="¿Qué buscas hoy?" class="ingresarBusqueda">
                         <!-- <input type="submit" value="Buscar" class="botonBuscar"> -->
                     </form>
                 </div>
                 <div class="iconosEncabezado">
-                    <a href=""><i class="fa-solid fa-user"></i></a>
+                    <a data-bs-toggle="modal" data-bs-target="#loginUserModal" href=""><i class="fa-solid fa-user"></i></a>
                     <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
                 <nav class="menu">
@@ -64,116 +64,162 @@
                         <li><a href="../pages/contacto.html">Contáctanos</a></li>
                     </ul>
                 </nav>
-
             </div>
         </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginUserModal" bs-backdrop="" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputEmailLogin" class="form-label">Tu Email</label>
+                            <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="emailHelp"
+                                placeholder="hola@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPasswordLogin" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="inputPasswordLogin"
+                                placeholder="Contraseña">
+                        </div>
+
+                        <div class="mb-3 form-check d-flex justify-content-center">
+                            <input type="checkbox" class="form-check-input me-2" id="checkLogin">
+                            <label class="form-check-label" for="checkLogin">Mantener mi sesión activa</label>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3">
+                            <button type="submit" class="btn btn-primary ">Iniciar Sesión</button>
+                        </div>
+
+                    </form>
+                    <div>
+                        <p class="text-center">
+                            <a href="">¿Olvidaste tu contraseña?</a>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-center">
+                            ¿Eres nuevo cliente? Inscríbete <a href="">Aquí</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main>
         <h1>POLERAS</h1>
         <!-- Info poleras -->
         <section class="contenedorPoleras">
-                <div class="infoPoleras">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, exercitationem excepturi expedita
-                        accusantium aperiam natus!</p>
-    
-                    <!-- Video muestra de poleras -->
-                    <div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VO6VcHa2ikk"
+            <div class="infoPoleras">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, exercitationem excepturi expedita
+                    accusantium aperiam natus!</p>
+
+                <!-- Video muestra de poleras -->
+                <div>
+                    <iframe width="560" height="315" src="https://va.media.tumblr.com/tumblr_rcz9kvfi9w1rmjnfh_720.mp4"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
-                    </iframe> 
-                    </div>             
+                    </iframe>
                 </div>
-            
-
+            </div>
             <!-- Tablas de medidas -->
             <div class="container contenedorMedidas">
                 <div class="row">
                     <div class="col-lg-12 d-flex flex-wrap align-items-lg-center   medidas">
                         <h2 class="col-lg-12 text-center">Medidas Mujer</h2>
                         <div class="col-lg-6 text-end">
-                            <img src="../img/poleras/polera-medida-mujer.png" class="col-lg-7" alt="Medidas Polera Mujer">
+                            <img src="../img/poleras/polera-medida-mujer.png" class="col-lg-7"
+                                alt="Medidas Polera Mujer">
                         </div>
                         <div class="col-lg-6">
-                        <table class="tablaMujer">
-                            <tr>
-                                <th>TALLA</th>
-                                <th>ANCHO 1</th>
-                                <th>ANCHO 2</th>
-                                <th>ANCHO 3</th>
-                                <th>LARGO</th>
-                            </tr>
-                            <tr>
-                                <td>S</td>
-                                <td>41 cm</td>
-                                <td>35 cm</td>
-                                <td>41 cm</td>
-                                <td>60 cm</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>44 cm</td>
-                                <td>38 cm</td>
-                                <td>44 cm</td>
-                                <td>62 cm</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>43 cm</td>
-                                <td>49 cm</td>
-                                <td>44 cm</td>
-                                <td>65 cm</td>
-                            </tr>
-                            <tr>
-                                <td>XL</td>
-                                <td>54 cm</td>
-                                <td>48 cm</td>
-                                <td>54 cm</td>
-                                <td>67 cm</td>
-                            </tr>
-                        </table>
-                    </div>
+                            <table class="tablaMujer">
+                                <tr>
+                                    <th>TALLA</th>
+                                    <th>ANCHO 1</th>
+                                    <th>ANCHO 2</th>
+                                    <th>ANCHO 3</th>
+                                    <th>LARGO</th>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>41 cm</td>
+                                    <td>35 cm</td>
+                                    <td>41 cm</td>
+                                    <td>60 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>44 cm</td>
+                                    <td>38 cm</td>
+                                    <td>44 cm</td>
+                                    <td>62 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>43 cm</td>
+                                    <td>49 cm</td>
+                                    <td>44 cm</td>
+                                    <td>65 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>54 cm</td>
+                                    <td>48 cm</td>
+                                    <td>54 cm</td>
+                                    <td>67 cm</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="col-lg-12 d-flex flex-wrap align-items-lg-center medidas">
                         <h2 class="col-lg-12 text-center">Medidas Hombre</h2>
                         <div class="col-lg-6 text-end">
-                        <img src="../img/poleras/polera-medida-hombre.png"class="col-lg-7 alt="Medidas Polera Hombre">
-                    </div>
-                    <div class="col-lg-6">
-                        <table>
-                            <tr>
-                                <th>TALLA</th>
-                                <th>ANCHO</th>
-                                <th>LARGO</th>
-                            </tr>
-                            <tr>
-                                <td>S</td>
-                                <td>46 cm</td>
-                                <td>70 cm</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>51 cm</td>
-                                <td>73 cm</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>56 cm</td>
-                                <td>76 cm</td>
-                            </tr>
-                            <tr>
-                                <td>XL</td>
-                                <td>61 cm</td>
-                                <td>78 cm</td>
-                            </tr>
-                        </table>
-                    </div>
-                        
+                            <img src="../img/poleras/polera-medida-hombre.png" class="col-lg-7 alt=" Medidas Polera
+                                Hombre">
+                        </div>
+                        <div class="col-lg-6">
+                            <table>
+                                <tr>
+                                    <th>TALLA</th>
+                                    <th>ANCHO</th>
+                                    <th>LARGO</th>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>46 cm</td>
+                                    <td>70 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>51 cm</td>
+                                    <td>73 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>56 cm</td>
+                                    <td>76 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>61 cm</td>
+                                    <td>78 cm</td>
+                                </tr>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
-                
+
             </div>
         </section>
         <!-- Galerìa de productos -->
@@ -194,87 +240,89 @@
             <div class="galeria">
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-01.png" alt="polera 01">
-                        <p class="descripcionItem">Producto 01</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/polera-hazbin-hotel-alastor.jpg" alt="polera 01">
+                        <p class="descripcionItem">Polera Alastor</p>
+                        <span class="precioItem">$17000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-02.png" alt="polera 02">
-                        <p class="descripcionItem">Producto 02</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/polera-helluba-boss-loona.jpg" alt="polera 02">
+                        <p class="descripcionItem">Polera Loona</p>
+                        <span class="precioItem">$17000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-01.png" alt="polera 03">
-                        <p class="descripcionItem">Producto 03</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/polera-helluva-boss-blitzo-stolas.jpg" alt="polera 03">
+                        <p class="descripcionItem">Polera BlitzoxStolas</p>
+                        <span class="precioItem">$17000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-02.png" alt="polera 04">
-                        <p class="descripcionItem">Producto 04</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/polera-final-space-avocato.jpg" alt="polera 04">
+                        <p class="descripcionItem">Polera Avocato</p>
+                        <span class="precioItem">$15000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-01.png" alt="polera 05">
-                        <p class="descripcionItem">Producto 05</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/poleras-encanto-dolores.jpg" alt="polera 05">
+                        <p class="descripcionItem">Polera Encanto</p>
+                        <span class="precioItem">$15000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-02.png" alt="polera 06">
-                        <p class="descripcionItem">Producto 06</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/polera-witch-bee.jpg" alt="polera 06">
+                        <p class="descripcionItem">Polera Witch Bee</p>
+                        <span class="precioItem">$15000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-01.png" alt="polera 07">
-                        <p class="descripcionItem">Producto 07</p>
-                        <span class="precioItem">$0000</span>
+                        <img src="../img/poleras/mockup/polera-witch-fox.jpg" alt="polera 07">
+                        <p class="descripcionItem">Polera Witch Fox</p>
+                        <span class="precioItem">$15000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
                         <img src="../img/poleras/polera-muestra-02.png" alt="polera 08">
-                        <p class="descripcionItem">Producto 08</p>
+                        <p class="descripcionItem">Pronto Nuevo Modelo!!</p>
                         <span class="precioItem">$0000</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
                     </a>
                 </div>
             </div>
         </section>
-        <nav aria-label="Page navigation example" class="paginacion">
+        <!-- Pagination -->
+        <nav class="paginacion" aria-label="...">
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link link-dark" href="#">1</a></li>
+                <li class="page-item"><a class="page-link link-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link link-dark" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link link-info" href="#">Next</a>
+                </li>
             </ul>
-          </nav>
+        </nav>
     </main>
+
     <footer>
         <!-- Listas/Columnas de informaciòn -->
-        <div class="container tresColumnas  ">
+        <div class="container tresColumnas">
             <div class="row">
                 <ul class="col-sm-4 d-flex justify-content-sm-center">
                     <div>
@@ -282,27 +330,27 @@
                         <li>Sobre Paperhinah</li>
                         <li>Inah Ilustradora</li>
                     </div>
-                    
+
                 </ul>
                 <ul class="col-sm-4 d-flex justify-content-sm-center">
                     <div>
                         <h5>¿Necesitas ayuda?</h5>
-                    <li>Formas de Pago</li>
-                    <li>Devoluciones y Cambios</li>
-                    <li>Envíos</li>
-                    <li>Preguntas Frecuentes</li>
+                        <li>Formas de Pago</li>
+                        <li>Devoluciones y Cambios</li>
+                        <li>Envíos</li>
+                        <li>Preguntas Frecuentes</li>
                     </div>
-                    
+
                 </ul>
                 <ul class="col-sm-4 d-flex justify-content-sm-center ">
                     <div class="columnasFooter3">
                         <h5>Contáctanos</h5>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/tienditapaperinah/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tienditapaperinah/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </div>
-                    
+
                 </ul>
             </div>
         </div>
@@ -312,7 +360,10 @@
             <p>©Romina Paniagua</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

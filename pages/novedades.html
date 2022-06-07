@@ -7,174 +7,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novedades</title>
     <link rel="icon" type="image/x-icon" href="../img/paperinah-imagen-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3d4d3a5137.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="grilla">
-    <header>
-        <!-- Noticias y Envíos -->
-        <div class="noticias">
-            <div>
-                <ul>
-                    <li>Noticias</li>
-                    <li>Mensajes express</li>
-                    <li>Horarios de Despacho</li>
-                </ul>
-            </div>
-        </div>
-        <div class="encabezadoMenu">
-            <!-- Encabezado: Checkbox botón Menú responsive - Logo - Buscador - Icono usuario - Icono cesta de compras -->
-            <div class="encabezado">
-
-                <input type="checkbox" id="botonMenu">
-                <div class="contenedorBotonMenu">
-                    <label for="botonMenu"><i class="fa-solid fa-bars"></i></label>
-                </div>
-                <div class="contentLogoEncabezado">
-                    <img class="logoEncabezado" src="../img/logo.png" alt="Logo Paperinah">
-                </div>
-                <div class="contenedorBuscador">
-                    <form action="" class="buscador">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="search" placeholder="¿Qué buscas hoy?" class="ingresarBusqueda">
-                        <!-- <input type="submit" value="Buscar" class="botonBuscar"> -->
-                    </form>
-                </div>
-                <div class="iconosEncabezado">
-                    <a href=""><i class="fa-solid fa-user"></i></a>
-                    <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
-                </div>
-                <nav class="menu">
+        <header>
+            <!-- Noticias y Envíos -->
+            <div class="noticias">
+                <div>
                     <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../pages/bienvenida.html">Bienvenida</a></li>
-                        <li class="subMenu"><a href="#categorias">Categorías</a>
-                            <ul>
-                                <li><a href="../pages/poleras.html">Poleras</a></li>
-                                <li><a href="">Llaveros</a></li>
-                                <li><a href="">Pins</a></li>
-                                <li><a href="">Libretas</a></li>
-                                <li><a href="">Stickers</a></li>
-                                <li><a href="">Libros</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Novedades</a></li>
-                        <li><a href="../pages/contacto.html">Contáctanos</a></li>
+                        <li>Noticias: Inauguramos nuestra tienda con un 15% dscto!!</li>
+                        <li>Ya abrimos nuestra sección Poleras</li>
+                        <li>ENVIOS: Todos los Viernes - Tiempo estimado de entrega 5 días hábiles.</li>
                     </ul>
-                </nav>
+                </div>
+            </div>
+            <div class="encabezadoMenu">
+                <!-- Encabezado: Checkbox botón Menú responsive - Logo - Buscador - Icono usuario - Icono cesta de compras -->
+                <div class="encabezado">
+                    <input type="checkbox" id="botonMenu">
+                    <div class="contenedorBotonMenu">
+                        <label for="botonMenu"><i class="fa-solid fa-bars"></i></label>
+                    </div>
+                    <div class="contentLogoEncabezado">
+                        <img class="logoEncabezado" src="../img/logo.png" alt="Logo Paperinah">
+                    </div>
+                    <div class="contenedorBuscador">
+                        <form action="" class="buscador d-flex align-items-center">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" placeholder="¿Qué buscas hoy?" class="ingresarBusqueda">
+                            <!-- <input type="submit" value="Buscar" class="botonBuscar"> -->
+                        </form>
+                    </div>
+                    <div class="iconosEncabezado">
+                        <a data-bs-toggle="modal" data-bs-target="#loginUserModal" href=""><i class="fa-solid fa-user"></i></a>
+                        <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../pages/bienvenida.html">Bienvenida</a></li>
+                            <li class="subMenu"><a href="#categorias">Categorías</a>
+                                <ul>
+                                    <li><a href="../pages/poleras.html">Poleras</a></li>
+                                    <li><a href="">Llaveros</a></li>
+                                    <li><a href="">Pins</a></li>
+                                    <li><a href="">Libretas</a></li>
+                                    <li><a href="">Stickers</a></li>
+                                    <li><a href="">Libros</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Novedades</a></li>
+                            <li><a href="../pages/contacto.html">Contáctanos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
+        <!-- Modal -->
+        <div class="modal fade" id="loginUserModal" bs-backdrop="" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputEmailLogin" class="form-label">Tu Email</label>
+                                <input type="email" class="form-control" id="inputEmailLogin"
+                                    aria-describedby="emailHelp" placeholder="hola@email.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPasswordLogin" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="inputPasswordLogin"
+                                    placeholder="Contraseña">
+                            </div>
+
+                            <div class="mb-3 form-check d-flex justify-content-center">
+                                <input type="checkbox" class="form-check-input me-2" id="checkLogin">
+                                <label class="form-check-label" for="checkLogin">Mantener mi sesión activa</label>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <button type="submit" class="btn btn-primary ">Iniciar Sesión</button>
+                            </div>
+
+                        </form>
+                        <div>
+                            <p class="text-center">
+                                <a href="">¿Olvidaste tu contraseña?</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-center">
+                                ¿Eres nuevo cliente? Inscríbete <a href="">Aquí</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-    <main>
-        <h1>NOVEDADES</h1>
-        <!-- Novedades -->
-        <section class="contenedorNovedades">
-            <!-- Item novedad: img + tìtulo + preview + link -->
-            <div class="novedad">
-                <div class="imagenNovedad">
-                    <img src="../img/novedades-noticias/img-novedades.png" alt="Novedad 01">
-                </div>
-                
-                <div class="novedadPreview">
-                    <h2 class="novedadTitulo">NOTICIA 01</h2>
-                    <p class="preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, fugiat?</p>
-                    <a href="" class="leerNovedad">leer más</a>
-                </div>
-            </div>
-            <!-- Item novedad: img + tìtulo + preview + link -->
-            <div class="novedad">
-                <div class="imagenNovedad">
-                    <img src="../img/novedades-noticias/img-novedades.png" alt="Novedad 02">
-                </div>
-                
-                <div class="novedadPreview">
-                    <h2 class="novedadTitulo">NOTICIA 02</h2>
-                    <p class="preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, fugiat?</p>
-                    <a href="" class="leerNovedad">leer más</a>
-                </div>
-            </div>
-            <!-- Item novedad: img + tìtulo + preview + link -->
-            <div class="novedad">
-                <div class="imagenNovedad">
-                    <img src="../img/novedades-noticias/img-novedades.png" alt="Novedad 03">
-                </div>
-                
-                <div class="novedadPreview">
-                    <h2 class="novedadTitulo">NOTICIA 03</h2>
-                    <p class="preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, fugiat?</p>
-                    <a href="" class="leerNovedad">leer más</a>
-                </div>
-            </div>
-        </section>
-        <!-- link para desplegar màs noticias -->
-        <span><a href="" class="masNovedades">ver más</a></span>
-        <!-- Newsletter -->
-        <section class="contenedorNewsletter newsletterNovedades">
-            <div class="imgInfoNewsletter">
-                <div class="imgNewsletter"><img src="../img/paperinah-imagen-logo.png" alt="Personaje Paperinah">
-                </div>
-                <div class="infoNewsletter">
-                    <div>
-                        <h4>NO TE PIERDAS LAS NOVEDADES</h4>
-                    <p>¡Mantengamonos en contacto! </p>
-                    <p>¡Te informaremos sobre las últimas ventas y nuevos lanzamientos!</p>
+
+        <main>
+            <h1>NOVEDADES</h1>
+            <!-- Novedades -->
+            <section class="contenedorNovedades">
+                <!-- Item novedad: img + tìtulo + preview + link -->
+                <div class="novedad">
+                    <div class="imagenNovedad">
+                        <img src="../img/novedades-noticias/img-novedades.png" alt="Novedad 01">
                     </div>
-                    
+
+                    <div class="novedadPreview">
+                        <h2 class="novedadTitulo">ANIME SEKAI</h2>
+                        <p class="preview">Estaremos con todo el pink-power!!</p>
+                        <a href="" class="leerNovedad">leer más</a>
+                    </div>
+                </div>
+                <!-- Item novedad: img + tìtulo + preview + link -->
+                <div class="novedad">
+                    <div class="imagenNovedad">
+                        <img src="../img/novedades-noticias/img-novedades.png" alt="Novedad 02">
+                    </div>
+
+                    <div class="novedadPreview">
+                        <h2 class="novedadTitulo">CONOCE A PAPERINAH</h2>
+                        <p class="preview">Conoce a nuestra adorable asistente de la tienda.</p>
+                        <a href="" class="leerNovedad">leer más</a>
+                    </div>
+                </div>
+                <!-- Item novedad: img + tìtulo + preview + link -->
+                <div class="novedad">
+                    <div class="imagenNovedad">
+                        <img src="../img/novedades-noticias/img-novedades.png" alt="Novedad 03">
+                    </div>
+
+                    <div class="novedadPreview">
+                        <h2 class="novedadTitulo">Y COMENZAMOS!</h2>
+                        <p class="preview">Un nuevo viaje y una nueva etapa...</p>
+                        <a href="" class="leerNovedad">leer más</a>
+                    </div>
+                </div>
+            </section>
+            <!-- link para desplegar màs noticias -->
+            <span><a href="" class="masNovedades">ver más</a></span>
+            <!-- Newsletter -->
+            <section class="contenedorNewsletter newsletterNovedades">
+                <div class="imgInfoNewsletter">
+                    <div class="imgNewsletter"><img src="../img/paperinah-imagen-logo.png" alt="Personaje Paperinah">
+                    </div>
+                    <div class="infoNewsletter">
+                        <div>
+                            <h4>NO TE PIERDAS LAS NOVEDADES</h4>
+                            <p>¡Mantengamonos en contacto! </p>
+                            <p>¡Te informaremos sobre las últimas ventas y nuevos lanzamientos!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- formulario de envìo de email -->
+                <div class="formularioNewsletter">
+                    <input class="ingresarEmail" type="text" value="  hola@email.com">
+                    <input class="BotonInscribete" type="submit" value="Inscríbete">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Listas/Columnas de informaciòn -->
+            <div class="container tresColumnas  ">
+                <div class="row">
+                    <ul class="col-sm-4 d-flex justify-content-sm-center">
+                        <div>
+                            <h5>Conócenos</h5>
+                            <li>Sobre Paperhinah</li>
+                            <li>Inah Ilustradora</li>
+                        </div>
+
+                    </ul>
+                    <ul class="col-sm-4 d-flex justify-content-sm-center">
+                        <div>
+                            <h5>¿Necesitas ayuda?</h5>
+                            <li>Formas de Pago</li>
+                            <li>Devoluciones y Cambios</li>
+                            <li>Envíos</li>
+                            <li>Preguntas Frecuentes</li>
+                        </div>
+
+                    </ul>
+                    <ul class="col-sm-4 d-flex justify-content-sm-center ">
+                        <div class="columnasFooter3">
+                            <h5>Contáctanos</h5>
+                            <a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/tienditapaperinah/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+
+                    </ul>
                 </div>
             </div>
-            <!-- formulario de envìo de email -->
-            <div class="formularioNewsletter">
-            <input class="ingresarEmail" type="text" value="  hola@email.com">
-            <input class="BotonInscribete" type="submit" value="Inscríbete">
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>©Romina Paniagua</p>
             </div>
-        </section>
-    </main>
-    <footer>
-        <!-- Listas/Columnas de informaciòn -->
-        <div class="container tresColumnas  ">
-            <div class="row">
-                <ul class="col-sm-4 d-flex justify-content-sm-center">
-                    <div>
-                        <h5>Conócenos</h5>
-                        <li>Sobre Paperhinah</li>
-                        <li>Inah Ilustradora</li>
-                    </div>
-                    
-                </ul>
-                <ul class="col-sm-4 d-flex justify-content-sm-center">
-                    <div>
-                        <h5>¿Necesitas ayuda?</h5>
-                    <li>Formas de Pago</li>
-                    <li>Devoluciones y Cambios</li>
-                    <li>Envíos</li>
-                    <li>Preguntas Frecuentes</li>
-                    </div>
-                    
-                </ul>
-                <ul class="col-sm-4 d-flex justify-content-sm-center ">
-                    <div class="columnasFooter3">
-                        <h5>Contáctanos</h5>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/tienditapaperinah/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                    
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Copyright -->
-        <div class="copyright">
-            <p>©Romina Paniagua</p>
-        </div>
-    </footer>
+        </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

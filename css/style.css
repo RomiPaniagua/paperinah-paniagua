@@ -135,7 +135,6 @@ h3 {
 .infoNewsletter div h4 {
     font-family: "stanberry";
     color: white;
- 
 }
 
 .infoNewsletter div p {
@@ -170,24 +169,29 @@ h3 {
 /* Inicio Footer */
 
 footer{
-    background-image: linear-gradient(to top, #fe76a6, pink, white );
+    background-image: linear-gradient(to top, rgba(255, 182, 193, 0.7), white );
 }
 
 .tresColumnas{
     font-family: "corbel";
 }
 
+
 .tresColumnas ul h5 {
     font-size: 16pt;
     font-weight: bold;
-    color: rgb(50, 50, 50);
+    color:#54252e;
     margin-bottom: 10px;
 }
 
 .tresColumnas ul li {
     list-style: none;
     font-size: 14pt;
-    color: rgb(50, 50, 50);
+}
+
+.tresColumnas ul li a{
+    text-decoration: none;
+    color: #54252e;
 }
 
 .columnasFooter3 a {
@@ -218,6 +222,16 @@ h1 {
     background-color: #fe76a6;
     font-family: "corbel";
     color: white;
+}
+
+.linkIlustradoraBienvenida{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.linkIlustradoraBienvenida:hover{
+    color: #b24aa6;
 }
 
 
@@ -287,11 +301,9 @@ h1 {
 
 .filtroGaleria select {
     background-color: pink;
-
     position: absolute;
     height: 100%;
-    width: 30%;
-    
+    width: 30%;  
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     font-weight: 600;
@@ -343,9 +355,17 @@ h1 {
     border-radius: 15px 15px 0px 0px;
 }
 
+.item a {
+    text-decoration: none;
+    font-family: "corbel";
+    font-size: 16pt;
+    color: #54252e;
+}
+
 .item p {
-    display: block;
-    padding: 5%;
+    display: inline-block;
+    width: 100%;
+    padding: 5% 1em;
     font-weight: 500;
 }
 
@@ -354,16 +374,11 @@ h1 {
     display: block;
     padding: 0%;
     margin: 0%;
+    font-family: sans-serif;
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.item a {
-    text-decoration: none;
-    font-family: "corbel";
-    font-size: 16pt;
-    color: #54252e;
-}
 
 .paginacion{
     margin-bottom: 5em;
@@ -473,8 +488,6 @@ h1 {
     font-weight: 600;
     color: white;
 }
-
-
 
 .labelCheckbox a {
     text-decoration: none;
@@ -592,7 +605,6 @@ h1 {
         
     }
 
-
     .fa-magnifying-glass {
         color: grey;
         margin-left: 20px;
@@ -610,16 +622,13 @@ h1 {
         margin-right: 1em;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
-    
+        align-items: center;    
     }
 
     .fa-user {
         color: grey;
         font-size: 25px;
-        padding: 0.5em;
-        
-    
+        padding: 0.5em; 
     }
     
     .fa-bag-shopping {
@@ -822,8 +831,10 @@ h1 {
     .contenedorNewsletter{
         height: auto;
         padding: 0.5em 0px 1em 0px;
-
+        margin-bottom: 5em;
     }
+
+    
 
     .imgInfoNewsletter{
         display: block;
@@ -832,10 +843,8 @@ h1 {
 
     .imgNewsletter{
         height: auto;
-        /* border: #54252e solid 5px; */
         text-align: center;
-    }
-   
+    }  
 
     .imgNewsletter img{
         height: 10em;
@@ -848,6 +857,8 @@ h1 {
     
     .infoNewsletter p{
         font-size: 1.2em;
+        margin-bottom: 0.3em;
+        line-height: 1em;
     }
 
     .formularioNewsletter{
@@ -868,27 +879,13 @@ h1 {
         width: 5em;
         font-size: 1.1em; 
     }
-
-    /* Espacio sobrante de Main no identificado (se observó grilla y no hay elementos desbordados*/
-    .newsletterIndex{
-        margin-bottom: 5em;
-    }
     
-    /* INICIO FOOTER  - Reemplazado por bootstrap*/
+    /* FOOTER */
 
-/*     .tresColumnas{
-        display: block;
-        padding-left: 1em;
-    }
-
-    .tresColumnas ul {
+    .tresColumnas ul{
         margin-bottom: 2em;
     }
 
-    .tresColumnas ul li{
-        padding: 5px 0px;
-    }
- */
     /* COPYRIGHT */
 
 .copyright {
@@ -920,17 +917,22 @@ h1 {
     height: 20em;
 }
 
-/* .bievenida div {
-    height: auto;
-} */
 .bievenida p{
-    font-size: 1em;
+    font-size: 1.2em;
+    line-height: 1.2em;
     padding: 2em 2em;
     height: auto;
     color: white;
 }
 
+.bievenida p span{
+    font-size: 1.3em;
+    font-weight: 700;
+}
 
+.linkIlustradoraBienvenida{
+    font-size: x-large;
+}
 
 /* CATEGORIAS */
 /* Poleras */
@@ -959,7 +961,6 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-
 .contenedorMedidas {
     height: auto;
 }
@@ -982,14 +983,12 @@ h1 {
     width: 20em;
 }
 
+
 /* Tabla de medidas */
-
-
 
 .medidas table {
     margin-bottom: 3em;
 }
-
 
 .medidas table td {
     padding: 5px;
@@ -1002,8 +1001,7 @@ h1 {
 }
 
 .tablaMujer tr{
-    font-size: 0.5em;
-    
+    font-size: 0.5em;   
 }
 
 
@@ -1038,7 +1036,6 @@ h1 {
     height: 4em;
     width: 50%;
     position: relative;
- 
 }
 
 .flechaFiltro {
@@ -1048,8 +1045,6 @@ h1 {
     position: absolute;
     right: 23.5%;
 }
-
-
 
 .resultadosGaleria {
     width: 100%;
@@ -1063,18 +1058,35 @@ h1 {
     justify-content: center;
 }
 .item {
+    width: 45%;
     padding: 0px 0px 0.5em 0px;
     margin: 0.5em;
 }
 
+.item a {
+    width: 100%;
+    text-align: center;
+}
 .item img {
-    width: 6.5em;
+    width: 100%;
+    margin: auto;
 }
 
 .item p {
-    display: block;
-    padding: 0%;
-    margin: 0%;
+    display: inline-block;
+    width: 80%;
+    padding: 0.5em 0px 0px 0px ;
+    margin: auto;
+    line-height: 18pt;
+}
+.precioItem{
+    width: 70%;
+    padding: 0% ;
+    margin: auto;
+}
+
+.paginacion{
+    margin-bottom: 5em;
 }
 
 /* NOVEDADES */
@@ -1101,12 +1113,15 @@ h1 {
 }
 
 .novedadTitulo {
+    text-align: left;
     font-size: 2em;
+    line-height: 0.9em;
+    margin: 0px 0.6em 0.3em 0.6em;
 }
 
 .preview {
     font-size: 1.3em;
-    line-height: 1.2em;
+    line-height: 1em;
     padding: 0 1em;
     text-align: left;
     margin-bottom: 1.5em;
@@ -1117,21 +1132,14 @@ h1 {
     margin-bottom: 50px;
 }
 
-
 .masNovedades {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-family: "corbel";
-    font-size: 20pt;
-    font-weight: bold;
-    font-style: italic;
-    color: #b24aa6;
-    margin: 20px;
+    margin: 1em 3em 1.5em ;
 }
+
 .newsletterNovedades{
     margin-bottom: 5em;
 }
+
 
 /* CONTACTO */
 
@@ -1141,6 +1149,7 @@ h1 {
     text-align: center;
     margin-bottom: 2em;
 }
+
 .emailRedessociales h2 {
     color: #54252e;
     font-size: 1.5em;
@@ -1200,8 +1209,7 @@ h1 {
     margin-bottom: 1em;
 }
 .inputCheckbox {
-   margin-right: 0.5em;
-   
+    margin-right: 0.5em; 
 }
 
 
@@ -1219,10 +1227,9 @@ h1 {
     width: auto;
     height: 2em;
     padding: 0px 1em;
-    font-size: 16pt;
-    
+    font-size: 16pt;    
 }
-    
+
 }
 
 
@@ -1263,17 +1270,6 @@ header {
     height: 13em;
     background-color: #b24aa6;
 }
-
-/* Barra noticias y envíos */
-
-
-
-/* .noticias p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 
 
 /* Inicio encabezado */
@@ -1341,25 +1337,6 @@ header {
 
 /* Inicio menú */
 
-/* Intento con tutorial usando flexbox */
-
-/* .menu {
-    display: flex;
-    justify-content: space-around;
-    border-style: solid;
-    border-color: rgb(166, 166, 166);
-    border-width: 1px 0px;
-    font-size: 50px;
-}
-
-.menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-
-
-} */
-
 .menu{
     width: 100%;
     height: 3.8em;
@@ -1382,8 +1359,6 @@ header {
     display: block;
     padding: 12px 20px;
 }
-
-
 
 .menu ul li ul {
     display: flex;
@@ -1503,6 +1478,7 @@ h3 {
 }
 
 .extra img {
+    width: 24em;
     border-radius: 20px;
 }
 
@@ -1530,121 +1506,62 @@ h3 {
 
 /* Newsletter */
 
-.contenedorNewsletter {
+.contenedorNewsletter{
     background-color: #b24aa6;
-    height: 300px;
-    text-align: center;
-    margin: 50px 0px 0px 0px;
-    
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px 5em 0px;
+    padding: 1.5em 0%;
 }
 
-.imgInfoNewsletter {
+.imgInfoNewsletter{
+    width: 100%;
     height: 150px;
-    text-align: center;
-}
-
-.imgNewsletter img {
-    height: 150px;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+    padding: 0px 15em;
 }
 
 .imgNewsletter {
     height: 150px;
-    display: inline-block;
+}
+.imgNewsletter img {
+    height: 150px;
 }
 
 .infoNewsletter {
     height: 150px;
-    width: 50%;
-    display: inline-block;
-    position: relative;
-}
-
-.infoNewsletter div {
-    height: 100px;
-    position: absolute;
-    top: 35%;
-    transform: translate(0, -50%)
+    padding-left: 5px;
 }
 
 .infoNewsletter div h4 {
     font-size: 30pt;
     margin-bottom: 5px;
-    text-align: left;
+    padding-left: 5px;
 }
 
 .infoNewsletter div p {
     font-size: 20pt;
-    line-height: 22pt;
-    text-align: left;
+    line-height: 20pt;
+    margin: 5px;
 }
 
 .formularioNewsletter {
-    /* background-color: blueviolet; */
-    display: inline-block;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;
     height: 50px;
-    width: 60%;
-    text-align: center;
+    width: 100%;
+    padding: 0px 15.5em;
 }
-
 
 /* Footer */
-footer {
-    margin-top: 80px;
+
+.tresColumnas ul{
+    margin-bottom: 2em;
 }
-
-.tresColumnas {
-    /* background-color: springgreen; */
-    height: 250px;
-    box-sizing: border-box;
-    display: block;
-    position: relative;
-    padding-top: 50px;
-}
-
-/* imagen de fondo para tarea */
-/* .tresColumnas{
-    background-image: url("https://media.istockphoto.com/illustrations/abstract-kawaii-colorful-sky-background-soft-gradient-pastel-comic-illustration-id1162695555?k=20&m=1162695555&s=170667a&w=0&h=ekZBY70A0sZyuiMLK9BTax9csBDl4_m0jXwy3XaA3D0=");
-    background-repeat: repeat-x;
-    background-size: contain; 
-} */
-
-.columnasFooter1 {
-    /* background-color: blue; */
-    list-style: none;
-    margin-bottom: 100px;
-    position: absolute;
-    left: 10%;
-    display: inline-block;
-    
-}
-
-.columnasFooter2 {
-    /* background-color: blue; */
-    list-style: none;
-    margin-bottom: 100px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: inline-block;
-    
-}
-
-.columnasFooter3 {
-    /* background-color: blue; */
-    list-style: none;
-    margin-bottom: 100px;
-    position: absolute;
-    right: 10%;
-    display: inline-block;
-    text-align: center; 
-}
-
-.tresColumnas ul li {
-    padding: 5px 0px;
-}
-
 
 /* copyriht */
 
@@ -1668,11 +1585,10 @@ h1 {
 .bievenida {
     background-color: #fe76a6;
     height: 400px;
-    margin: 0px 100px;
+    margin: 0px 100px 5em 100px;
     border-radius: 15px;
     position: relative;
 }
-
 
 .contenedorImagenBienvenida {
     display: inline-block;
@@ -1693,13 +1609,25 @@ h1 {
 .bievenida p {
     display: inline-block;
     position: absolute;
-    height: 50%;
+    height: auto;
     width: 35%;
     top: 50%;
     left: 50%;
     transform: translateY(-50%);
     font-size: 1.1em;
+    line-height: 1.1em;
+    margin: 0%;
+    z-index: 1;
 }
+
+.bievenida p span{
+    font-size: 1.4em;
+}
+
+.linkIlustradoraBienvenida{
+    font-size: 1.2em;
+}
+
 
 .bordeBienvenida {
     height: 70%;
@@ -1749,52 +1677,9 @@ h1 {
     border: white solid 10px;
 }
 
-/* Maquetación reemplazada por bootstrap */
-/* 
-.contenedorMedidas {
-
-    display: flex;
-justify-content: space-around;
-align-items: center;
-margin: 0px 20px 100px 20px;
-   
-    background-color: #fe76a6;
-}
-
-.medidas {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 40%;
-    height: 100%;
-    
-}
-
-.medidas{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-.medidas h2 {
-    width: 100%;
-    text-align: left;
-    font-size: 20pt;
-    margin-bottom: 20px;
-    padding-left: 50px;
-}
-
-.medidas img {
-    display: inline-block;
-    height: 250px;
-    margin-left: 50px;
-}
-
- */
-
- .contenedorMedidas{
+.contenedorMedidas{
     margin-bottom: 100px;
- }
+}
 .medidas{
     margin-bottom: 4em;
 }
@@ -1896,13 +1781,17 @@ margin: 0px 20px 100px 20px;
 }
 
 .item img:hover{
-    height: 370px;
-    
+    height: 370px;   
 }
 
 .item:hover{
     box-shadow:  0px 0px 10px rgb(165, 165, 165) ;
 }
+
+.paginacion{
+    color: #b24aa6;
+}
+
 
 /* Novedades */
 
@@ -1950,11 +1839,13 @@ margin: 0px 20px 100px 20px;
 
 .novedadTitulo {
     font-size: 25pt;
+    line-height: 25pt;
     margin-bottom: 5%;
 }
 
 .preview {
     font-size: 16pt;
+    line-height: 16pt;
     margin-bottom: 50%;
     padding-right: 2%;
 }
@@ -1963,6 +1854,9 @@ margin: 0px 20px 100px 20px;
     font-size: 12pt;
 }
 
+.masNovedades {
+    margin: 0px 19em;
+}
 
 /* Contacto */
 
@@ -1970,6 +1864,7 @@ margin: 0px 20px 100px 20px;
     background-color: #b24aa6;
     height: 500px;
     position: relative;
+    margin-bottom: 5em;
 }
 
 .emailRedessociales {
