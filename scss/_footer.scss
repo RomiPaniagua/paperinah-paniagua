@@ -1,0 +1,41 @@
+//Estilos footer
+
+$footer-fondo-degradado: linear-gradient(to top, rgba(255, 182, 193, 0.7), white);
+
+
+.footer-titulos{
+    font-family: $typo-secundaria;
+    font-size: 16pt;
+    font-weight: bold;
+    color:$color-texto-dark;
+    margin-bottom: 10px;
+}
+
+
+.footer-estilo-lista{
+    list-style: none;
+    font-size: 14pt;
+}
+
+.footer-links{
+    font-family: $typo-secundaria;
+    text-decoration: none;
+    color: $color-texto-dark;
+}
+
+.iconos-rrss {
+    font-size: 30px;
+    color: $color-secundario;
+    padding: 3px;
+}
+
+
+//Copyright
+
+@mixin copyright{
+    background-color: $color-primario;
+    font-family: $typo-secundaria;
+    color: $color-texto-light;
+    text-align: center;
+}
+

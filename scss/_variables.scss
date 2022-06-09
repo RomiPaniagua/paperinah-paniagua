@@ -1,0 +1,42 @@
+//Mixins
+
+@mixin reset{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin titulo-subtitulos($f-family, $f-size, $f-weight, $f-color, $alineacion) {
+    font-family: $f-family;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    color:  $f-color;
+    text-align: $alineacion;   
+}
+
+@mixin btn-formularios ($bg-color, $f-size, $f-color) {
+    background-color: $bg-color;
+    border-radius: 10px;
+    border-style: none;
+    font-family: $typo-secundaria;
+    font-weight: bold;
+    font-size: $f-size;
+    color: $f-color;
+}
+
+
+@mixin labelformularios ($f-family, $f-size, $f-weight, $f-color) {
+    font-family: $f-family;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    color: $f-color;
+}
+@mixin inputformularios ($f-size) {
+    margin-right: 1%;
+    background-color: $color-componente-primario;
+    border-radius: 10px;
+    border-style: none;
+    font-size: $f-size;
+    color: $color-terciario;
+}
