@@ -3,6 +3,18 @@
 @import "tipografias";
 @import "layout";
 @import "footer";
+@import "animaciones";
+@import "header";
+
+/* Function Paleta de colores */
+@function color($color-name) {
+    @return map-get($colores-light, $color-name);
+}
+
+/* Function Tipografías */
+@function font($typo-name) {
+    @return map-get($typo, $typo-name);
+}
 
 * {
     @include reset;
@@ -24,134 +36,49 @@ body {
 
 // EG INDEX 
 
-
 // EG HEAD NOTICIAS
 
 .noticias {
-    background-color: $color-primario;
-    height: 40px;
-    width: 100vw;
-    overflow: hidden;
-    text-align: center;
-    padding-top: 0.5em;
-    margin: auto;
-
-    ul {
-        display: flex;
-        padding: 0;
-        width: 300%;
-        animation: slideNoticias 12s infinite alternate ease-in-out;
-
-        li {
-            list-style: none;
-            color: $color-componente-primario;
-            font-family: $typo-secundaria;
-            font-weight: bold;
-            font-style: italic;
-            font-size: 14pt;
-            width: 100vw;
-        }
-    }
+    @extend .estiloNoticias;
 }
 
-@keyframes slideNoticias {
-    0% {
-        margin-left: 0;
-    }
-
-    30% {
-        margin-left: 0;
-    }
-
-    33% {
-        margin-left: -100%;
-    }
-
-    63% {
-        margin-left: -100%;
-    }
-
-    66% {
-        margin-left: -200%;
-    }
-
-    100% {
-        margin-left: -200%;
-    }
-}
+@include animacionNoticias;
 
 
 // EG HEAD ENCABEZADO
 
 .encabezado {
-    background-color: $color-componente-primario;
-
-    .buscador {
-        background-color: $color-componente-secundario;
-        border-radius: 50px;
-        border-color: $color-componente-secundario;
-    }
+    @extend .estiloEncabezado;
 }
 
 
 // EG HEAD MENU
 
 .menu {
-    background-color: $color-componente-primario;
-    border-radius: 5px;
-
-    ul {
-        list-style: none;
-        text-align: center;
-
-        li {
-            a {
-                text-decoration: none;
-                font-family: $typo-secundaria;
-                font-size: 22px;
-                color: $color-terciario;
-                transition: 0.07s;
-
-                &:hover {
-                    background: $color-secundario;
-                    color: $color-texto-light;
-                    border-radius: 5px;
-                }
-            }
-
-            ul {
-                color: $color-texto-light;
-                border-radius: 5px;
-            }
-        }
-
-
-    }
+    @extend .estiloMenu;
 }
 
 // EG CAROUSEL
 
 .carousel {
-    z-index: -1;
+    z-index: 0;
 }
 
 
 // EG MAIN CATEGORIAS
 
 .contenedorCategorias {
-    h3 {
-        @include titulo-subtitulos($typo-secundaria, 2em, 700, $color-terciario-light, center);
+    h1 {
+        @include titulo-subtitulos(font(secundaria), 2em, 700, color(terciario-light), center);
     }
 }
-
-
 
 //EG MAIN EXTRAS
 
 .contenedorExtras {
 
-    h3 {
-        @include titulo-subtitulos($typo-secundaria, 2em, 700, $color-terciario-light, center);
+    h2 {
+        @include titulo-subtitulos(font(secundaria), 2em, 700, color(terciario-light), center);
     }
 
     .extra {
@@ -160,13 +87,13 @@ body {
             a {
                 input {
                     border-style: solid;
-                    border-radius: 5px;
+                    border-radius: $radius;
                     border-width: 3px;
-                    border-color: $color-secundario;
-                    background-color: $color-componente-primario;
-                    font-family: $typo-secundaria;
+                    border-color: color(secundario);
+                    background-color: color(componente-primario);
+                    font-family: font(secundaria);
                     font-weight: bold;
-                    color: $color-secundario;
+                    color: color(secundario);
                 }
             }
         }
@@ -176,20 +103,19 @@ body {
 // EG MAIN NEWSLETTER
 
 .contenedorNewsletter {
-    background-color: $color-secundario;
+    background-color: color(secundario);
     height: 300px;
 
     .infoNewsletter {
         div {
 
-            h4 {
-                font-family: $typo-principal;
-                color: $color-texto-light
+            h3 {
+                @include titulo-subtitulos(font(principal), none, none, color(texto-light), none);
             }
 
             p {
-                font-family: "corbel";
-                color: $color-texto-light;
+                font-family: font(secundaria);
+                color: color(texto-light);
             }
         }
 
@@ -200,16 +126,11 @@ body {
         .ingresarEmail {
             width: 75%;
             height: 100%;
-            margin-right: 1%;
-            background-color: $color-componente-primario;
-            border-radius: 10px;
-            border-style: none;
-            font-size: 16pt;
-            color: $color-terciario;
+            @include inputformularios (16pt)
         }
 
         .BotonInscribete {
-            @include btn-formularios ($color-componente-secundario, 16px, $color-texto-dark);
+            @include btn-formularios (color(componente-secundario), 16px, color(texto-dark));
         }
 
     }
@@ -221,7 +142,7 @@ footer {
     background-image: $footer-fondo-degradado;
 
     .tresColumnas {
-        font-family: $typo-secundaria;
+        font-family: font(secundaria);
 
         ul {
             h5 {
@@ -248,6 +169,112 @@ footer {
         @include copyright;
     }
 }
+
+//EG MAIN BIENVENIDA
+
+h1 {
+    font-family: font(principal);
+    color: color(terciario);
+    font-size: 2em;
+}
+
+.bievenida {
+    p {
+        background-color: color(primario);
+        font-family: font(secundaria);
+        color: color(texto-light);
+
+        .linkIlustradoraBienvenida {
+            text-decoration: none;
+            color: color(texto-light);
+            font-weight: 700;
+
+            &:hover {
+                color: color(secundario);
+            }
+
+        }
+    }
+}
+
+//EG MAIN CATEGORÍA POLERAS
+
+.infoPoleras p {
+    background-color:color(primario);
+    font-family: font(secundaria);
+    color: color(texto-light);
+}
+
+.infoPoleras iframe {
+    border-radius: $radius*3;
+}
+
+.medidas h2 {
+    @include titulo-subtitulos(font(secundaria), none, none, color(terciario), center);
+}
+
+.medidas img {
+    border-radius: $radius*5;
+}
+
+// Tabla de medidas
+
+.medidas{
+    @include estiloTabla;
+} 
+
+.contenedorGaleria h2 {
+    @include titulo-subtitulos(font(secundaria), 20pt, bold, color(terciario), center);
+}
+
+.filtroGaleria{
+    @include estiloFiltro;
+} 
+
+.resultadosGaleria {
+    @include titulo-subtitulos(font(secundaria), 12pt, 700, color(terciario), start);
+}
+
+.item {
+    background-color: color(componente-secundario);
+    display: inline-block;
+    text-align: center;
+    border: color(componente-secundario) solid 2px;
+    border-radius: $radius*3;
+
+    a {
+        text-decoration: none;
+        font-family: font(secundaria);
+        font-size: 16pt;
+        color: color(texto-dark);
+
+        img {
+            display: block;
+            border-radius: $radius*3 $radius*3 0px 0px;
+        }
+
+        p {
+            display: inline-block;
+            width: 100%;
+            padding: 5% 1em;
+            font-weight: 500;
+        }
+
+        .precioItem{
+            display: block;
+            padding: 0%;
+            margin: 0%;
+            font-family: sans-serif;
+            font-size: 1.5em;
+            font-weight: bold;
+        }        
+    }
+}
+
+.paginacion{
+    margin-bottom: 5em;
+}
+
 
 
 //SCREEN SM ----------------------------------
@@ -318,15 +345,15 @@ footer {
             margin-left: 1em;
 
             .fa-bars {
-                color: $color-terciario;
+                color: color(terciario);
                 font-size: 30px;
                 padding: 0.5em;
-                border-radius: 5px;
+                border-radius: $radius;
                 cursor: pointer;
 
                 &:hover {
-                    background-color: $color-primario;
-                    color: $color-componente-primario;
+                    background-color: color(primario);
+                    color: color(componente-primario);
                 }
             }
         }
@@ -354,7 +381,7 @@ footer {
                 width: 90%;
 
                 .fa-magnifying-glass {
-                    color: $color-terciario;
+                    color: color(terciario);
                     margin-left: 20px;
                 }
 
@@ -375,16 +402,19 @@ footer {
             align-items: center;
 
             .fa-user {
-                color: $color-terciario;
+                color: color(terciario);
                 font-size: 25px;
                 padding: 0.5em;
             }
 
             .fa-bag-shopping {
-                color: $color-terciario;
+                color: color(terciario);
                 font-size: 25px;
             }
         }
+
+
+
     }
 
 
@@ -423,7 +453,7 @@ footer {
                     position: absolute;
                     left: 8.5em;
                     top: 7em;
-                    background: $color-componente-primario;
+                    background: color(componente-primario);
                     width: 100%px;
                     display: none;
                     z-index: 2;
@@ -434,9 +464,9 @@ footer {
                             padding: 0.5em 1.5em;
 
                             &:hover {
-                                background: $color-primario;
+                                background: color(primario);
                                 width: 100%;
-                                border-radius: 5px;
+                                border-radius: $radius;
                             }
                         }
                     }
@@ -449,7 +479,7 @@ footer {
 
     .contenedorCategorias {
 
-        h3 {
+        h1 {
             width: 100vw;
             padding: 1.5em 0px 1em 0px;
             margin: 0;
@@ -466,7 +496,7 @@ footer {
                 a {
                     input {
                         width: 9.5em;
-                        border-radius: 15px;
+                        border-radius: $radius*3;
                     }
                 }
             }
@@ -478,7 +508,7 @@ footer {
     //SM MAIN EXTRAS
 
     .contenedorExtras {
-        h3 {
+        h2 {
             width: 100vw;
             padding: 1.5em 0px 1em 0px;
             margin: 0;
@@ -498,7 +528,7 @@ footer {
 
                 img {
                     width: 15em;
-                    border-radius: 20px;
+                    border-radius: $radius*4;
                 }
 
                 div {
@@ -542,7 +572,7 @@ footer {
 
             .infoNewsletter {
 
-                h4 {
+                h3 {
                     font-size: 2em;
                     line-height: 1em;
                 }
@@ -586,16 +616,16 @@ footer {
         }
     }
 
-       //SM MODAL
+    //SM MODAL
 
-       .modal {
+    .modal {
         .modal-dialog {
             .modal-content {
-                background-color: $color-primario-superlight;
+                background-color: color(primario-superlight);
 
                 .modal-header {
                     h5 {
-                        @include titulo-subtitulos($typo-secundaria, 1.7em, bold, $color-terciario, left)
+                        @include titulo-subtitulos(font(secundaria), 1.7em, bold, color(terciario), left)
                     }
                 }
 
@@ -603,7 +633,7 @@ footer {
 
                     .mb-3 {
                         .form-label {
-                            @include labelformularios ($typo-secundaria, 1.2em, 700, $color-terciario)
+                            @include labelformularios (font(secundaria), 1.2em, 700, color(terciario))
                         }
 
                         .form-control {
@@ -611,25 +641,26 @@ footer {
                         }
 
                         .form-check-label {
-                            font-family: $typo-secundaria;
-                            color: $color-terciario;
+                            font-family: font(secundaria);
+                            color: color(terciario);
                         }
 
-                        .btn{
-                            @include btn-formularios ($color-terciario, 1.5em, $color-texto-light);
-                            
+                        .btn {
+                            @include btn-formularios (color(terciario), 1.5em, color(texto-light));
+
                         }
 
                     }
 
-                    div{
-                        p{
-                            font-family: $typo-secundaria;
+                    div {
+                        p {
+                            font-family: font(secundaria);
                             font-size: 1.1em;
-                            color: $color-terciario;
-                            a{
+                            color: color(terciario);
+
+                            a {
                                 font-weight: 600;
-                                color: $color-secundario;
+                                color: color(secundario);
 
                             }
                         }
@@ -642,8 +673,198 @@ footer {
         }
     }
 
+    //BIENVENIDA
+
+    h1 {
+        text-align: center;
+        padding: 1em 0px 0.5em 0px;
+    }
+
+    .bievenida {
+        margin: 0px 0px 5em 0px;
+        height: auto;
+
+        .contenedorImagenBienvenida {
+            text-align: center;
+            margin: 0.5em 0px;
+
+            img {
+                height: 20em;
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.1em;
+            padding: 2em 2em;
+            height: auto;
+
+            span {
+                font-size: 1.3em;
+                font-weight: 700;
+            }
+
+            .linkIlustradoraBienvenida {
+                font-size: x-large;
+            }
+        }
+    }
+
+    //SM CATEGORIA POLERAS
+    
+    .infoPoleras{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1em 0px 1.5em 0px;
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.1em;
+            text-align: left;
+            padding: 1.5em;
+        }
+
+        iframe {
+            width: 100%;
+            border:color(primario-light) solid 5px;
+            margin-bottom: 1em;
+        }
+    }
+    
+    .contenedorMedidas {
+        height: auto;
+
+        .medidas {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                width: 100%;
+                margin-bottom: 0.5em;
+                text-align: center;
+            }
+
+            img {
+                width: 20em;
+            }
+        }
+    }
+    
+
+    // Tabla de medidas 
+    
+    .medidas {
+        table {
+            margin-bottom: 3em;
+
+            td {
+                padding: 5px;
+                border-bottom: color(tabla-lineas) solid 3px;
+                text-align: center;
+            }
+        }
+    } 
+    
+    
+    .tablaMujer{
+        width: 15em;
+
+        tr{
+            font-size: 0.5em;   
+        }
+    }
+  
+    // Galerìa 
+    .contenedorGaleria {
+        display: flex;
+        flex-flow: wrap;
+        margin: 5em 0px;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+        }    
+    }
+    
+
+
+    .filtroGaleria {
+        width: 100%;
+        height: auto;
+        padding: 1.5em 0px;
+        text-align: center;
+
+        label {
+            display: block;
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+
+        select {
+            display: inline-block;
+            height: 4em;
+            width: 50%;
+            position: relative;
+        }
+
+        .flechaFiltro {
+            display: inline-block;
+            height: 4em;
+            width: 8%;
+            position: absolute;
+            right: 23.5%;
+        }
+    }
+
+
+    
+    .resultadosGaleria {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    
+    .galeria{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item {
+            width: 45%;
+            padding: 0px 0px 0.5em 0px;
+            margin: 0.5em;
+
+            a {
+                width: 100%;
+                text-align: center;
+
+                img {
+                    width: 100%;
+                    margin: auto;
+                }
+
+                p {
+                    display: inline-block;
+                    width: 80%;
+                    padding: 0.5em 0px 0px 0px ;
+                    margin: auto;
+                    line-height: 18pt;
+                }
+
+                .precioItem{
+                    width: 70%;
+                    padding: 0% ;
+                    margin: auto;
+                }
+            }
+        }
+    }
 
 }
+
+
 
 
 //SCREEN XL
@@ -718,7 +939,7 @@ footer {
                 width: 700px;
 
                 .fa-magnifying-glass {
-                    color: $color-terciario;
+                    color: color(terciario);
                     margin-left: 20px;
                 }
 
@@ -735,14 +956,14 @@ footer {
             margin-right: 50px;
 
             .fa-user {
-                color: $color-terciario;
+                color: color(terciario);
                 font-size: 30px;
                 padding: 10px;
 
             }
 
             .fa-bag-shopping {
-                color: $color-terciario;
+                color: color(terciario);
                 font-size: 30px;
                 padding: 10px;
 
@@ -758,7 +979,7 @@ footer {
         height: 3.8em;
         display: flex;
         justify-content: center;
-        border-top: $color-componente-secundario solid 2px;
+        border-top: color(componente-secundario) solid 2px;
 
         ul {
             display: flex;
@@ -777,7 +998,7 @@ footer {
                     display: flex;
                     flex-direction: column;
                     position: absolute;
-                    background: $color-componente-primario;
+                    background: color(componente-primario);
                     width: 180px;
                     display: none;
                     z-index: 2;
@@ -788,7 +1009,7 @@ footer {
 
                         a {
                             &:hover {
-                                background: $color-secundario;
+                                background: color(secundario);
                                 width: 180px;
 
                             }
@@ -807,7 +1028,7 @@ footer {
 
     .contenedorCategorias {
 
-        h3 {
+        h1 {
             padding: 100px 0px 20px 0px;
         }
 
@@ -821,7 +1042,7 @@ footer {
                 a {
                     input {
                         height: 350px;
-                        border-radius: 20px;
+                        border-radius: $radius*4;
                     }
                 }
             }
@@ -832,10 +1053,10 @@ footer {
 
     .contenedorExtras {
 
-        h3 {
+        h2 {
             padding: 100px 0px 20px 0px;
         }
-        
+
         .dosExtras {
             padding: 20px;
             margin-bottom: 20px;
@@ -849,7 +1070,7 @@ footer {
 
                 img {
                     width: 24em;
-                    border-radius: 20px;
+                    border-radius: $radius*4;
                 }
 
                 div {
@@ -902,7 +1123,7 @@ footer {
                 padding-left: 5px;
 
                 div {
-                    h4 {
+                    h3 {
                         font-size: 30pt;
                         margin-bottom: 5px;
                         padding-left: 5px;
@@ -946,11 +1167,11 @@ footer {
     .modal {
         .modal-dialog {
             .modal-content {
-                background-color: $color-primario-superlight;
+                background-color: color(primario-superlight);
 
                 .modal-header {
                     h5 {
-                        @include titulo-subtitulos($typo-secundaria, 1.7em, bold, $color-terciario, left)
+                        @include titulo-subtitulos(font(secundaria), 1.7em, bold, color(terciario), left)
                     }
                 }
 
@@ -958,7 +1179,7 @@ footer {
 
                     .mb-3 {
                         .form-label {
-                            @include labelformularios ($typo-secundaria, 1.2em, 700, $color-terciario)
+                            @include labelformularios (font(secundaria), 1.2em, 700, color(terciario))
                         }
 
                         .form-control {
@@ -966,25 +1187,26 @@ footer {
                         }
 
                         .form-check-label {
-                            font-family: $typo-secundaria;
-                            color: $color-terciario;
+                            font-family: font(secundaria);
+                            color: color(terciario);
                         }
 
-                        .btn{
-                            @include btn-formularios ($color-terciario, 1.5em, $color-texto-light);
-                            
+                        .btn {
+                            @include btn-formularios (color(terciario), 1.5em, color(texto-light));
+
                         }
 
                     }
 
-                    div{
-                        p{
-                            font-family: $typo-secundaria;
+                    div {
+                        p {
+                            font-family: font(secundaria);
                             font-size: 1.1em;
-                            color: $color-terciario;
-                            a{
+                            color: color(terciario);
+
+                            a {
                                 font-weight: 600;
-                                color: $color-secundario;
+                                color: color(secundario);
 
                             }
                         }
@@ -997,26 +1219,200 @@ footer {
         }
     }
 
+    //BIENVENIDA
+
+    h1 {
+        font-size: 25pt;
+        text-align: center;
+        padding: 30px 0px;
+    }
+
+    .bievenida {
+        background-color: color(primario);
+        height: 400px;
+        margin: 0px 100px 5em 100px;
+        border-radius: $radius*3;
+        position: relative;
+
+        .contenedorImagenBienvenida {
+            display: inline-block;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+
+            .imagenBienvenida {
+                height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+        }
+
+        p {
+            display: inline-block;
+            position: absolute;
+            height: auto;
+            width: 35%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3em;
+            line-height: 1.1em;
+            margin: 0%;
+            z-index: 1;
+
+            span {
+                font-size: 1.4em;
+            }
+
+            .linkIlustradoraBienvenida {
+                font-size: 1.2em;
+            }
+        }
+
+        .bordeBienvenida {
+            height: 70%;
+            width: 90%;
+            margin: 50x 50px;
+            border: solid color(componente-primario) 5px;
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    //XL CATEGORÍA POLERAS
+
+    .infoPoleras {
+        background-color: color(primario);
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 400px;
+        width: 100%;
+        padding: 0 3em;
+        margin-bottom: 100px;
+
+        p {
+            width: 50%;
+            font-size: 1.3em;
+            line-height: 1.1em;
+            margin-left: 2em;
+        }
+
+        iframe {
+            width: 560px;
+            height: 315px;
+            border-radius: $radius*3;
+            border: color(componente-primario) solid 10px;
+            
+        }
+    }
+    
+    
+    .contenedorMedidas{
+        margin-bottom: 100px;
+
+        .medidas{
+            margin-bottom: 4em;
+        }
+    }
+
+    
+    .contenedorGaleria {
+        text-align: center;
+
+        h2 {
+            @include titulo-subtitulos(font(secundaria), 20pt, none, color(terciario), start);
+            display: inline-block;
+            width: 45%;
+            margin-bottom: 2%;
+        }
+    }
+    
+    
+    .filtroGaleria {
+        display: inline-block;
+        width: 45%;
+        position: relative;
+
+        label {
+            display: inline-block;
+            font-size: 12pt;
+            margin: 3%;
+            padding-left: 25%;
+        }
+
+        select{
+            font-size: 11pt;
+            padding-left: 1%;
+        }
+    }
+    
+    .resultadosGaleria {
+        display: block;
+        text-align: left;
+        font-size: 12pt;
+        margin: 0px 0px 5% 5%;
+    }
+    
+    .galeria{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-areas: "item" "item" "item"
+        "item""item""item"
+        "item""item""item" ;
+
+        grid-row-gap: 2em;
+        margin: 0 4em;
+    }
 
 
+    .item {
+        grid-area: "item";
+        width: 60%;
+        margin: auto;
+        padding: 0px 0px 0.5em 0px;
+        transition: 0.5s;
 
+        a {
+            font-size: 16pt;
 
+            img {
+                width: 100%;
+                transition: 0.5s;
+            }
+    
+            p{
+                margin: 0%;
+                padding: 1% 10%;
+            }
+    
+            .precioItem{
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
 
+        &:hover{
+            box-shadow: $shadow;
+            width: 80%;
+        }
+        
+        
+    }
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
 }

@@ -3,3 +3,13 @@
 $sm:320px;
 $md:768px;
 $xl:1200px;
+
+//Mixin XL *NO FUNCIONÓ *sad face
+
+@mixin desktop {
+    @media screen and (min-width:#{$xl}){
+        @content
+    }
+}
+
+

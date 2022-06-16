@@ -1,13 +1,25 @@
+@import "colores";
+
+/* Function Paleta de colores */
+@function color($color-name){
+    @return map-get($colores-light, $color-name);
+}
+
+/* Function Tipografías */
+@function font($typo-name){
+    @return map-get($typo, $typo-name);
+}
+
 //Estilos footer
 
 $footer-fondo-degradado: linear-gradient(to top, rgba(255, 182, 193, 0.7), white);
 
 
 .footer-titulos{
-    font-family: $typo-secundaria;
+    font-family: font(secundaria);
     font-size: 16pt;
     font-weight: bold;
-    color:$color-texto-dark;
+    color: color(texto-dark);
     margin-bottom: 10px;
 }
 
@@ -18,14 +30,14 @@ $footer-fondo-degradado: linear-gradient(to top, rgba(255, 182, 193, 0.7), white
 }
 
 .footer-links{
-    font-family: $typo-secundaria;
+    font-family: font(secundaria);
     text-decoration: none;
-    color: $color-texto-dark;
+    color: color(texto-dark);
 }
 
 .iconos-rrss {
     font-size: 30px;
-    color: $color-secundario;
+    color: color(secundario);
     padding: 3px;
 }
 
@@ -33,9 +45,9 @@ $footer-fondo-degradado: linear-gradient(to top, rgba(255, 182, 193, 0.7), white
 //Copyright
 
 @mixin copyright{
-    background-color: $color-primario;
-    font-family: $typo-secundaria;
-    color: $color-texto-light;
+    background-color: color(primario);
+    font-family: font(secundaria);
+    color: color(texto-light);
     text-align: center;
 }
 

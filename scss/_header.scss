@@ -1,0 +1,82 @@
+@import "colores";
+
+/* Function Paleta de colores */
+@function color($color-name){
+    @return map-get($colores-light, $color-name);
+}
+
+/* Function Tipografías */
+@function font($typo-name){
+    @return map-get($typo, $typo-name);
+}
+
+
+//Estilos Head
+
+.estiloNoticias{
+    background-color: color(primario);
+    height: 40px;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 0.5em;
+    margin: auto;
+
+    ul {
+        display: flex;
+        padding: 0;
+        width: 300%;
+        animation: slideNoticias 12s infinite alternate ease-in-out;
+
+        li {
+            list-style: none;
+            color: color(componente-primario);
+            font-family: font(secundaria);
+            font-weight: bold;
+            font-style: italic;
+            font-size: 14pt;
+            width: 100vw;
+        }
+    }
+}
+
+.estiloEncabezado{
+    background-color:color(componente-primario);
+
+    .buscador {
+        background-color: color(componente-secundario);
+        border-radius: $radius*10;
+        border-color: color(componente-secundario);
+    }
+}
+
+.estiloMenu{
+    background-color: color(componente-primario);
+    border-radius: $radius;
+
+    ul {
+        list-style: none;
+        text-align: center;
+
+        li {
+            a {
+                text-decoration: none;
+                font-family: font(secundaria);
+                font-size: 22px;
+                color: color(terciario);
+                transition: 0.07s;
+
+                &:hover {
+                    background: color(secundario);
+                    color: color(texto-light);
+                    border-radius: 5px;
+                }
+            }
+
+            ul {
+                color: color(texto-light);
+                border-radius: $radius;
+            }
+        }
+    }
+}

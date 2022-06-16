@@ -1,3 +1,9 @@
+@import "colores";
+
+$radius: 5px;
+
+$shadow: 0px 0px 10px rgb(165, 165, 165);
+
 //Mixins
 
 @mixin reset{
@@ -17,9 +23,9 @@
 
 @mixin btn-formularios ($bg-color, $f-size, $f-color) {
     background-color: $bg-color;
-    border-radius: 10px;
+    border-radius: $radius*2;
     border-style: none;
-    font-family: $typo-secundaria;
+    font-family: font(secundaria);
     font-weight: bold;
     font-size: $f-size;
     color: $f-color;
@@ -34,9 +40,82 @@
 }
 @mixin inputformularios ($f-size) {
     margin-right: 1%;
-    background-color: $color-componente-primario;
-    border-radius: 10px;
+    background-color: color(componente-primario);
+    border-radius: $radius*2;
     border-style: none;
     font-size: $f-size;
-    color: $color-terciario;
+    color: color(terciario);
+}
+
+@mixin estiloTabla{
+    table {
+        background-color:color(tabla-relleno);
+        display: inline-block;
+        margin: 15px;
+        border-spacing: 0;
+        border: color(tabla-lineas) solid 5px;
+        border-radius: $radius*3;
+        font-family: font(secundaria);
+        font-size: 14pt;
+
+        tr {
+            width: 100%;
+
+            th {
+                padding: 10px;
+                border-bottom: color(tabla-lineas) solid 3px;
+            }
+
+            td {
+                padding: 5px;
+                border-bottom: color(tabla-lineas) solid 3px;
+            }
+        }
+    }
+}
+
+@mixin estiloFiltro{
+    label {
+        font-family: font(secundaria);
+        font-size: 12pt;
+        font-style: italic;
+        color: color(terciario);
+    }
+
+    select {
+        background-color:color(primario-light);
+        position: absolute;
+        height: 100%;
+        width: 30%;  
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: 600;
+        color: color(texto-dark);
+        border-style: none;
+        border-radius: $radius;
+        padding-left: 3%;
+        outline: 0;
+        cursor:pointer;
+        appearance: none;
+    }
+
+    .flechaFiltro {
+        background-color: color(primario-light);
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        width: 8%;
+        right: 0%;
+        border-radius: 0px $radius $radius 0px;
+        pointer-events: none;
+
+        .fa-chevron-down {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            color: color(componente-primario);
+            font-size: 20px;
+        }
+    }
 }

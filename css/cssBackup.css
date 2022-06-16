@@ -117,7 +117,7 @@ body{
 
 /* Inicio Categorias */
 
-h3 {
+h1 {
     font-family: "corbel";
     color: grey;
     text-align: center;
@@ -762,7 +762,7 @@ h1 {
     /* INICIO CATEGORIAS */
 
     /* corresponde a todos los h3 de index */
-    h3 {
+    h1 {
         width: 100vw;
         font-size: 2em;
         padding: 1.5em 0px 1em 0px;
@@ -1441,7 +1441,7 @@ header {
 
 /* Categorias */
 
-h3 {
+h1 {
     font-size: 30pt;
     padding: 100px 0px 20px 0px;
 }
