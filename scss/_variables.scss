@@ -39,7 +39,6 @@ $shadow: 0px 0px 10px rgb(165, 165, 165);
     color: $f-color;
 }
 @mixin inputformularios ($f-size) {
-    margin-right: 1%;
     background-color: color(componente-primario);
     border-radius: $radius*2;
     border-style: none;

@@ -1,0 +1,66 @@
+/* Function Paleta de colores */
+@function color($color-name) {
+    @return map-get($colores-light, $color-name);
+}
+
+/* Function Tipografías */
+@function font($typo-name) {
+    @return map-get($typo, $typo-name);
+}
+
+//ESTILOS MODAL
+
+@mixin estiloModal {
+    .modal-dialog {
+        .modal-content {
+            background-color: color(primario-superlight);
+
+            .modal-header {
+                h5 {
+                    @include titulo-subtitulos(font(secundaria), 1.7em, bold, color(terciario), left)
+                }
+            }
+
+            .modal-body {
+
+                .mb-3 {
+                    .form-label {
+                        @include labelformularios (font(secundaria), 1.2em, 700, color(terciario))
+                    }
+
+                    .form-control {
+                        @include inputformularios (1em);
+                    }
+
+                    .form-check-label {
+                        font-family: font(secundaria);
+                        color: color(terciario);
+                    }
+
+                    .btn {
+                        @include btn-formularios (color(secundario), 1.5em, color(texto-light));
+
+                    }
+
+                }
+
+                div {
+                    p {
+                        font-family: font(secundaria);
+                        font-size: 1.1em;
+                        color: color(terciario);
+
+                        a {
+                            font-weight: 600;
+                            color: color(secundario);
+
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}

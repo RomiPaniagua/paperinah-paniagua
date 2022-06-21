@@ -76,6 +76,8 @@
 
 /* Function Paleta de colores */
 /* Function Tipografías */
+/* Function Paleta de colores */
+/* Function Tipografías */
 * {
   padding: 0;
   margin: 0;
@@ -144,9 +146,6 @@ body {
     font-family: "corbel";
     color: white; }
   .contenedorNewsletter .formularioNewsletter .ingresarEmail {
-    width: 75%;
-    height: 100%;
-    margin-right: 1%;
     background-color: white;
     border-radius: 10px;
     border-style: none;
@@ -158,7 +157,7 @@ body {
     border-style: none;
     font-family: "corbel";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.2em;
     color: #54252e; }
 
 footer {
@@ -306,6 +305,134 @@ h1 {
 .paginacion {
   margin-bottom: 5em; }
 
+.contenedorNovedades {
+  background-color: lightpink; }
+  .contenedorNovedades .novedades .card img {
+    background-color: #fe76a6; }
+  .contenedorNovedades .novedades .card h5 {
+    font-family: "stanberry";
+    font-size: none;
+    font-weight: bolder;
+    color: #54252e;
+    text-align: none; }
+  .contenedorNovedades .novedades .card p {
+    font-family: "corbel";
+    color: #54252e; }
+  .contenedorNovedades .novedades .card a {
+    font-family: "corbel";
+    font-weight: bold;
+    color: #b24aa6;
+    text-decoration: none; }
+
+.masNovedades {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "corbel";
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  color: #b24aa6;
+  margin: 20px; }
+
+.newsletterNovedades {
+  margin-bottom: 5em; }
+
+/* Contacto Información */
+.contenedorContacto {
+  margin-bottom: 5em; }
+  .contenedorContacto .contactoTexto h2 {
+    font-family: "corbel";
+    font-size: 1.5em;
+    font-weight: 700;
+    color: grey;
+    text-align: center; }
+    @media screen and (min-width: 1200px) {
+      .contenedorContacto .contactoTexto h2 {
+        font-size: 1.6em; } }
+  .contenedorContacto .contactoTexto p {
+    font-family: "corbel";
+    font-size: 1em;
+    color: grey; }
+    @media screen and (min-width: 1200px) {
+      .contenedorContacto .contactoTexto p {
+        font-size: 1.2em;
+        line-height: 1.2em; } }
+    .contenedorContacto .contactoTexto p .contactoEmail {
+      font-style: italic;
+      font-weight: bold; }
+  .contenedorContacto .formularioContacto {
+    background-color: lightpink;
+    border-radius: 10px; }
+    .contenedorContacto .formularioContacto fieldset input {
+      background-color: white;
+      border-radius: 10px;
+      border-style: none;
+      font-size: none;
+      color: grey; }
+    .contenedorContacto .formularioContacto fieldset label {
+      font-family: "corbel";
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #9f9f9f; }
+    .contenedorContacto .formularioContacto fieldset select {
+      background-color: white;
+      border-radius: 10px;
+      border-style: none;
+      font-size: none;
+      color: grey; }
+    .contenedorContacto .formularioContacto fieldset textarea {
+      background-color: white;
+      border-radius: 10px;
+      border-style: none;
+      font-size: none;
+      color: grey;
+      height: 10em; }
+    .contenedorContacto .formularioContacto .form-check input {
+      height: 1.3em;
+      width: 1.3em;
+      opacity: 0.7; }
+    .contenedorContacto .formularioContacto .form-check label {
+      font-family: "corbel";
+      font-size: 1em;
+      font-weight: 500;
+      color: #54252e; }
+      .contenedorContacto .formularioContacto .form-check label a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold; }
+      @media screen and (min-width: 1200px) {
+        .contenedorContacto .formularioContacto .form-check label {
+          font-size: 1.1em; }
+          .contenedorContacto .formularioContacto .form-check label a {
+            font-weight: bolder; } }
+    .contenedorContacto .formularioContacto .botonesContacto input {
+      background-color: #b24aa6;
+      border-radius: 10px;
+      border-style: none;
+      font-family: "corbel";
+      font-weight: bold;
+      font-size: 1.3em;
+      color: white;
+      width: 5em;
+      height: 2.2em; }
+      @media screen and (min-width: 1200px) {
+        .contenedorContacto .formularioContacto .botonesContacto input {
+          width: 8em;
+          height: 2.6em; } }
+  .contenedorContacto .redesContacto p {
+    font-family: "corbel";
+    font-size: 1em;
+    color: grey; }
+    @media screen and (min-width: 1200px) {
+      .contenedorContacto .redesContacto p {
+        font-size: 1.2em;
+        line-height: 1.2em; } }
+  .contenedorContacto .redesContacto a {
+    color: #fe76a6;
+    font-size: 3em;
+    text-decoration: none; }
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .grilla {
     display: grid;
@@ -436,9 +563,9 @@ h1 {
     flex-flow: wrap;
     justify-content: center; }
     .contenedorCategorias .imagenesCategoria .imgCateg {
-      margin: 1em; }
+      margin: 0.5em; }
       .contenedorCategorias .imagenesCategoria .imgCateg a input {
-        width: 9.5em;
+        width: 8.5em;
         border-radius: 15px; }
   .contenedorExtras h2 {
     width: 100vw;
@@ -446,7 +573,7 @@ h1 {
     margin: 0; }
   .contenedorExtras .dosExtras {
     width: 100vw;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
@@ -490,12 +617,13 @@ h1 {
       padding: 1em; }
       .contenedorNewsletter .formularioNewsletter .ingresarEmail {
         font-size: 1em;
-        height: 2.5em;
-        width: 12em;
-        padding: 1em, 1em; }
+        height: 3em;
+        width: 18rem;
+        padding: 1em, 1em;
+        margin-bottom: 0.5em; }
       .contenedorNewsletter .formularioNewsletter .BotonInscribete {
         height: 2.5em;
-        width: 5em;
+        width: 18rem;
         font-size: 1.1em; }
   .copyright {
     height: 3em;
@@ -516,7 +644,6 @@ h1 {
       font-weight: 700;
       color: grey; }
     .modal .modal-dialog .modal-content .modal-body .mb-3 .form-control {
-      margin-right: 1%;
       background-color: white;
       border-radius: 10px;
       border-style: none;
@@ -526,7 +653,7 @@ h1 {
       font-family: "corbel";
       color: grey; }
     .modal .modal-dialog .modal-content .modal-body .mb-3 .btn {
-      background-color: grey;
+      background-color: #b24aa6;
       border-radius: 10px;
       border-style: none;
       font-family: "corbel";
@@ -552,8 +679,8 @@ h1 {
       .bievenida .contenedorImagenBienvenida img {
         height: 20em; }
     .bievenida p {
-      font-size: 1.2em;
-      line-height: 1.1em;
+      font-size: 1.1em;
+      line-height: 1em;
       padding: 2em 2em;
       height: auto; }
       .bievenida p span {
@@ -644,14 +771,24 @@ h1 {
           margin: auto; }
         .galeria .item a p {
           display: inline-block;
-          width: 80%;
+          width: 90%;
           padding: 0.5em 0px 0px 0px;
           margin: auto;
           line-height: 18pt; }
         .galeria .item a .precioItem {
-          width: 70%;
+          width: 85%;
           padding: 0%;
-          margin: auto; } }
+          margin: auto; }
+  .contenedorNovedades {
+    padding: 2em 0 2em 0; }
+    .contenedorNovedades .novedades {
+      margin: 2em 0 2em 0; }
+      .contenedorNovedades .novedades .card {
+        width: 18rem;
+        margin: auto;
+        border-radius: 15px; }
+        .contenedorNovedades .novedades .card img {
+          border-radius: 15px 15px 0 0; } }
 
 @media screen and (min-width: 1200px) {
   .grilla {
@@ -742,12 +879,18 @@ h1 {
   .contenedorCategorias h1 {
     padding: 100px 0px 20px 0px; }
   .contenedorCategorias .imagenesCategoria {
-    text-align: center; }
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "categoria" "categoria" "categoria" "categoria" "categoria" "categoria";
+    margin: 0 5em; }
     .contenedorCategorias .imagenesCategoria .imgCateg {
+      grid-area: "categoria";
       display: inline-block;
       padding: 20px; }
       .contenedorCategorias .imagenesCategoria .imgCateg a input {
-        height: 350px;
+        height: 300px;
         border-radius: 20px; }
   .contenedorExtras h2 {
     padding: 100px 0px 20px 0px; }
@@ -807,6 +950,9 @@ h1 {
       height: 50px;
       width: 100%;
       padding: 0px 13em; }
+      .contenedorNewsletter .formularioNewsletter .ingresarEmail {
+        width: 75%;
+        margin-right: 0.5em; }
       .contenedorNewsletter .formularioNewsletter .BotonInscribete {
         width: 15%; }
   .copyright {
@@ -828,7 +974,6 @@ h1 {
       font-weight: 700;
       color: grey; }
     .modal .modal-dialog .modal-content .modal-body .mb-3 .form-control {
-      margin-right: 1%;
       background-color: white;
       border-radius: 10px;
       border-style: none;
@@ -838,7 +983,7 @@ h1 {
       font-family: "corbel";
       color: grey; }
     .modal .modal-dialog .modal-content .modal-body .mb-3 .btn {
-      background-color: grey;
+      background-color: #b24aa6;
       border-radius: 10px;
       border-style: none;
       font-family: "corbel";
@@ -977,4 +1122,39 @@ h1 {
         font-weight: bold; }
     .item:hover {
       box-shadow: 0px 0px 10px #a5a5a5;
-      width: 80%; } }
+      width: 80%; }
+  .contenedorNovedades {
+    padding: 2em 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contenedorNovedades .novedades {
+      margin: 1em 0;
+      width: 80%;
+      display: flex;
+      justify-content: center; }
+      .contenedorNovedades .novedades div {
+        background-color: white;
+        width: 60%;
+        border-radius: 15px; }
+      .contenedorNovedades .novedades .card {
+        display: flex;
+        flex-direction: row;
+        width: 13rem; }
+        .contenedorNovedades .novedades .card img {
+          border-radius: 15px 0 0 15px; }
+        .contenedorNovedades .novedades .card .cardBodyNovedades {
+          display: flex;
+          flex-wrap: wrap; }
+          .contenedorNovedades .novedades .card .cardBodyNovedades .cardNovedades {
+            width: auto; }
+            .contenedorNovedades .novedades .card .cardBodyNovedades .cardNovedades .tituloNovedades {
+              width: 10.5em;
+              font-size: 2em; }
+          .contenedorNovedades .novedades .card .cardBodyNovedades .cardLeerMas {
+            display: flex;
+            align-items: end; }
+  /*     .tituloNovedades {
+        width: 25em;
+    }
+ */ }

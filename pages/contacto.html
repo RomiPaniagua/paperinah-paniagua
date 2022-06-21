@@ -121,62 +121,95 @@
 
     <main>
         <h1>CONTÁCTANOS</h1>
-        <section class="contenedorContacto">
+        <section class="container contenedorContacto">
             <!-- Info de contacto -->
-            <div class="emailRedessociales">
-                <h2>¿Tienes dudas, solicitud o reclamos?</h2>
-                <p class="infoEmail">Llena el formulario y te responderemos.</p>
-                <p class="infoEmail">También nos puedes envíar un correo directo a:</p>
-                <p class="contactoEmail">tienditapaperinah@gmail.com</p>
-                <div class="redesContacto">
-                    <a href="https://www.facebook.com/" target="_blank">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/tienditapaperinah/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/home" target="_blank">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
+            <div class=" d-flex justify-content-center contactoTexto mb-4">
+                <div class="column col-xl-8">
+                    <h2 class="text-center">¿Tienes dudas, solicitud o reclamos?</h2>
+                    <div>
+                        <p class="infoEmail"> Tu opinión es muy importante para nosotros. Con este formulario podrás
+                            comunicarnos lo que desees. Siempre será un gusto responderte.</p>
+                        <p class="infoEmail">También nos puedes envíar un correo directo a: <span
+                                class="contactoEmail">tienditapaperinah@gmail.com</span></p>
+                    </div>
                 </div>
             </div>
             <!-- Formulario para contactarse  -->
-            <form class="formularioContacto" action="" method="get">
-                <fieldset>
-                    <!-- <legend>Tus Datos</legend> -->
-                    <!-- Nombre de secciòn de formulario -->
-                    <label for="nombre"> Tu nombre</label>
-                    <input type="text" name="nombre">
-                    <label for="email">Tu email</label>
-                    <input type="email" placeholder="  hola@email.com">
-                    <label for="asunto">Asunto</label>
-                    <input type="text" name="asunto">
+            <form class="mb-5 px-3 py-5  formularioContacto" action="" method="get">
+                <fieldset class="row  d-flex justify-content-center">
+                    <div class="form-floating mb-3 col-sm-12 col-xl-4">
+                        <input type="text" class="form-control ml-2 " name="nombre" id="floatingInput"
+                            placeholder="nombre">
+                        <label class="mx-2" for="floatingInput">Tu nombre</label>
+                    </div>
 
-                    <label for="comentarios">Tu Mensaje</label>
-                    <textarea name="comentarios" id="comentarios" cols="30" rows="10"
-                        placeholder=" Deja tus comentarios">
-                </textarea>
+                    <div class="form-floating mb-3 col-sm-12 col-xl-4">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="hola@email.com">
+                        <label class="mx-2" for="floatingInput">hola@email.com</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-xl-8">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Sugerencias</option>
+                            <option value="1">Reclamos</option>
+                            <option value="3">Otros</option>
+                        </select>
+                        <label class="mx-2" for="floatingSelect">Asunto:</label>
+                    </div>
+
+                    <div class="form-floating mb-3 col-xl-8">
+                        <textarea class="form-control" placeholder="Deja tus comentarios"
+                            id="floatingTextarea"></textarea>
+                        <label class="mx-2" for="floatingTextarea">Deja tus comentarios</label>
+                    </div>
                 </fieldset>
-                <div class="checkNoticiasOfertas">
-                    <input class="inputCheckbox" type="checkbox">
-                    <label class="labelCheckbox" for="checkboxNewsletter">¿Quieres recibir nuestras noticias y
-                        ofertas?</label>
+                <!-- Checkbox -->
+                <div class="d-flex justify-content-start justify-content-xl-center mb-2">
+                    <div class="col-xl-8">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                ¿Quieres recibir nuestras noticias y ofertas?
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Aceptas los
+                                <a
+                                    href="https://www.iubenda.com/es/help/37616-que-son-los-terminos-y-condiciones-y-para-que-sirven">
+                                    Términos y condiciones</a>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-
-
-                <!-- Terminos y condiciones -->
-                <div class="tyc">
-                    <!-- <legend>Términos y Condiciones</legend> -->
-                    <input class="inputCheckbox" type="checkbox">
-                    <label class="labelCheckbox" for="TyC">Aceptas los
-                        <a
-                            href="https://www.iubenda.com/es/help/37616-que-son-los-terminos-y-condiciones-y-para-que-sirven">
-                            Terminos y condiciones</a>
-                    </label>
+                <!-- Botones -->
+                <div class="d-flex justify-content-center botonesContacto">
+                    <div class="col-xl-8 d-flex justify-content-center">
+                        <input class="botonFormContacto mx-2" type="submit" value="Enviar">
+                        <input class="botonFormContacto mx-2" type="reset" value="Limpiar">
+                    </div>
                 </div>
-                <input class="botonFormContacto" type="submit" value="Enviar">
-                <input class="botonFormContacto" type="reset" value="Limpiar">
             </form>
+            <!-- Redes Sociales -->
+            <div class="  d-flex justify-content-center redesContacto">
+                <div class="col-xl-8 ">
+                    <p class="text-center">Además puedes escribirnos por la red social que desees:</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook mx-2"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tienditapaperinah/" target="_blank">
+                            <i class="fa-brands fa-instagram mx-2"></i>
+                        </a>
+                        <a href="https://twitter.com/home" target="_blank">
+                            <i class="fa-brands fa-twitter mx-2"></i>
+                        </a>
+                    </div>
+                
+                </div>
+                
+            </div>
         </section>
     </main>
 

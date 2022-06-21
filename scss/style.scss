@@ -5,6 +5,7 @@
 @import "footer";
 @import "animaciones";
 @import "header";
+@import "modal";
 
 /* Function Paleta de colores */
 @function color($color-name) {
@@ -124,13 +125,11 @@ body {
     .formularioNewsletter {
 
         .ingresarEmail {
-            width: 75%;
-            height: 100%;
-            @include inputformularios (16pt)
+            @include inputformularios (16pt);
         }
 
         .BotonInscribete {
-            @include btn-formularios (color(componente-secundario), 16px, color(texto-dark));
+            @include btn-formularios (color(componente-secundario), 1.2em, color(texto-dark));
         }
 
     }
@@ -200,7 +199,7 @@ h1 {
 //EG MAIN CATEGORÍA POLERAS
 
 .infoPoleras p {
-    background-color:color(primario);
+    background-color: color(primario);
     font-family: font(secundaria);
     color: color(texto-light);
 }
@@ -219,17 +218,17 @@ h1 {
 
 // Tabla de medidas
 
-.medidas{
+.medidas {
     @include estiloTabla;
-} 
+}
 
 .contenedorGaleria h2 {
     @include titulo-subtitulos(font(secundaria), 20pt, bold, color(terciario), center);
 }
 
-.filtroGaleria{
+.filtroGaleria {
     @include estiloFiltro;
-} 
+}
 
 .resultadosGaleria {
     @include titulo-subtitulos(font(secundaria), 12pt, 700, color(terciario), start);
@@ -260,20 +259,198 @@ h1 {
             font-weight: 500;
         }
 
-        .precioItem{
+        .precioItem {
             display: block;
             padding: 0%;
             margin: 0%;
             font-family: sans-serif;
             font-size: 1.5em;
             font-weight: bold;
-        }        
+        }
     }
 }
 
-.paginacion{
+.paginacion {
     margin-bottom: 5em;
 }
+
+//EG MAIN NOVEDADES
+
+.contenedorNovedades {
+    background-color: color(primario-light);
+
+    .novedades {
+        .card {
+
+            img {
+                background-color: color(primario);
+            }
+
+            h5 {
+                @include titulo-subtitulos(font(principal), none, bolder, color(texto-dark), none);
+            }
+
+            p {
+                font-family: font(secundaria);
+                color: color(texto-dark);
+            }
+
+            a {
+                font-family: font(secundaria);
+                font-weight: bold;
+                color: color(secundario);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.masNovedades {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: font(secundaria);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    color: color(secundario);
+    margin: 20px;
+}
+
+.newsletterNovedades {
+    margin-bottom: 5em;
+}
+
+//EG CONTACTO
+
+/* Contacto Información */
+
+.contenedorContacto {
+    margin-bottom: 5em;
+
+    .contactoTexto {
+
+        h2 {
+            @include titulo-subtitulos(font(secundaria), 1.5em, 700, color(terciario), center);
+
+            @include desktop {
+                font-size: 1.6em;
+            }
+        }
+
+        p {
+            font-family: font(secundaria);
+            font-size: 1em;
+            color: color(terciario);
+
+            @include desktop {
+                font-size: 1.2em;
+                line-height: 1.2em;
+            }
+
+            .contactoEmail {
+                font-style: italic;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .formularioContacto {
+        background-color: color(primario-light);
+        border-radius: $radius*2;
+
+        fieldset {
+            input {
+                @include inputformularios(none);
+            }
+
+            label {
+                @include labelformularios(font(secundaria), 1.1em, 500, color(terciario-light));
+            }
+
+            select {
+                @include inputformularios(none);
+            }
+
+            textarea {
+                @include inputformularios(none);
+                height: 10em;
+            }
+        }
+
+        .form-check {
+            input {
+                height: 1.3em;
+                width: 1.3em;
+                opacity: 0.7;
+            }
+
+            label {
+                @include labelformularios(font(secundaria), 1em, 500, color(texto-dark));
+
+                a {
+                    text-decoration: none;
+                    color: color(texto-light);
+                    font-weight: bold;
+                }
+
+                @include desktop {
+                    font-size: 1.1em;
+
+                    a {
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+
+        .botonesContacto {
+            input {
+                @include btn-formularios(color(secundario), 1.3em, color(texto-light));
+                width: 5em;
+                height: 2.2em;
+
+                @include desktop {
+                    width: 8em;
+                    height: 2.6em;
+                }
+            }
+        }
+    }
+
+
+
+
+    .redesContacto {
+
+        p {
+            font-family: font(secundaria);
+            font-size: 1em;
+            color: color(terciario);
+
+            @include desktop {
+                font-size: 1.2em;
+                line-height: 1.2em;
+            }
+        }
+
+        a {
+            color: color(primario);
+            font-size: 3em;
+            text-decoration: none;
+
+        }
+    }
+
+
+
+}
+
+
+
+
+
 
 
 
@@ -491,11 +668,11 @@ h1 {
             justify-content: center;
 
             .imgCateg {
-                margin: 1em;
+                margin: 0.5em;
 
                 a {
                     input {
-                        width: 9.5em;
+                        width: 8.5em;
                         border-radius: $radius*3;
                     }
                 }
@@ -516,7 +693,7 @@ h1 {
 
         .dosExtras {
             width: 100vw;
-            margin-bottom: 5em;
+            margin-bottom: 3em;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -591,15 +768,17 @@ h1 {
 
             .ingresarEmail {
                 font-size: 1em;
-                height: 2.5em;
-                width: 12em;
+                height: 3em;
+                width: 18rem;
                 padding: 1em, 1em;
+                margin-bottom: 0.5em;
+               
 
             }
 
             .BotonInscribete {
                 height: 2.5em;
-                width: 5em;
+                width: 18rem;
                 font-size: 1.1em;
             }
         }
@@ -619,58 +798,7 @@ h1 {
     //SM MODAL
 
     .modal {
-        .modal-dialog {
-            .modal-content {
-                background-color: color(primario-superlight);
-
-                .modal-header {
-                    h5 {
-                        @include titulo-subtitulos(font(secundaria), 1.7em, bold, color(terciario), left)
-                    }
-                }
-
-                .modal-body {
-
-                    .mb-3 {
-                        .form-label {
-                            @include labelformularios (font(secundaria), 1.2em, 700, color(terciario))
-                        }
-
-                        .form-control {
-                            @include inputformularios (1em);
-                        }
-
-                        .form-check-label {
-                            font-family: font(secundaria);
-                            color: color(terciario);
-                        }
-
-                        .btn {
-                            @include btn-formularios (color(terciario), 1.5em, color(texto-light));
-
-                        }
-
-                    }
-
-                    div {
-                        p {
-                            font-family: font(secundaria);
-                            font-size: 1.1em;
-                            color: color(terciario);
-
-                            a {
-                                font-weight: 600;
-                                color: color(secundario);
-
-                            }
-                        }
-                    }
-
-
-                }
-
-            }
-        }
+       @include estiloModal;
     }
 
     //BIENVENIDA
@@ -694,8 +822,8 @@ h1 {
         }
 
         p {
-            font-size: 1.2em;
-            line-height: 1.1em;
+            font-size: 1.1em;
+            line-height: 1em;
             padding: 2em 2em;
             height: auto;
 
@@ -711,8 +839,8 @@ h1 {
     }
 
     //SM CATEGORIA POLERAS
-    
-    .infoPoleras{
+
+    .infoPoleras {
         display: flex;
         flex-direction: column-reverse;
         margin: 1em 0px 1.5em 0px;
@@ -726,11 +854,11 @@ h1 {
 
         iframe {
             width: 100%;
-            border:color(primario-light) solid 5px;
+            border: color(primario-light) solid 5px;
             margin-bottom: 1em;
         }
     }
-    
+
     .contenedorMedidas {
         height: auto;
 
@@ -751,10 +879,10 @@ h1 {
             }
         }
     }
-    
+
 
     // Tabla de medidas 
-    
+
     .medidas {
         table {
             margin-bottom: 3em;
@@ -765,17 +893,17 @@ h1 {
                 text-align: center;
             }
         }
-    } 
-    
-    
-    .tablaMujer{
+    }
+
+
+    .tablaMujer {
         width: 15em;
 
-        tr{
-            font-size: 0.5em;   
+        tr {
+            font-size: 0.5em;
         }
     }
-  
+
     // Galerìa 
     .contenedorGaleria {
         display: flex;
@@ -785,9 +913,9 @@ h1 {
         h2 {
             width: 100%;
             text-align: center;
-        }    
+        }
     }
-    
+
 
 
     .filtroGaleria {
@@ -819,14 +947,14 @@ h1 {
     }
 
 
-    
+
     .resultadosGaleria {
         width: 100%;
         text-align: center;
         margin-bottom: 1.5em;
     }
-    
-    .galeria{
+
+    .galeria {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -847,19 +975,40 @@ h1 {
 
                 p {
                     display: inline-block;
-                    width: 80%;
-                    padding: 0.5em 0px 0px 0px ;
+                    width: 90%;
+                    padding: 0.5em 0px 0px 0px;
                     margin: auto;
                     line-height: 18pt;
                 }
 
-                .precioItem{
-                    width: 70%;
-                    padding: 0% ;
+                .precioItem {
+                    width: 85%;
+                    padding: 0%;
                     margin: auto;
                 }
             }
         }
+    }
+
+    // SM NOVEDADES
+
+    .contenedorNovedades {
+        padding: 2em 0 2em 0;
+
+        .novedades {
+            margin: 2em 0 2em 0;
+
+            .card {
+                width: 18rem;
+                margin: auto;
+                border-radius: $radius*3;
+
+                img {
+                    border-radius: $radius*3 $radius*3 0 0;
+                }
+            }
+        }
+
     }
 
 }
@@ -1034,14 +1183,23 @@ h1 {
 
         .imagenesCategoria {
             text-align: center;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            grid-template-areas: "categoria" "categoria" "categoria"
+            "categoria" "categoria" "categoria";
+            
+            margin: 0 5em;
 
             .imgCateg {
+                grid-area: "categoria";
                 display: inline-block;
                 padding: 20px;
 
                 a {
                     input {
-                        height: 350px;
+                        height: 300px;
                         border-radius: $radius*4;
                     }
                 }
@@ -1145,6 +1303,11 @@ h1 {
             width: 100%;
             padding: 0px 13em;
 
+            .ingresarEmail{
+                width: 75%;
+                margin-right: 0.5em;
+            }
+
             .BotonInscribete {
                 width: 15%;
             }
@@ -1165,58 +1328,7 @@ h1 {
     //XL MODAL
 
     .modal {
-        .modal-dialog {
-            .modal-content {
-                background-color: color(primario-superlight);
-
-                .modal-header {
-                    h5 {
-                        @include titulo-subtitulos(font(secundaria), 1.7em, bold, color(terciario), left)
-                    }
-                }
-
-                .modal-body {
-
-                    .mb-3 {
-                        .form-label {
-                            @include labelformularios (font(secundaria), 1.2em, 700, color(terciario))
-                        }
-
-                        .form-control {
-                            @include inputformularios (1em);
-                        }
-
-                        .form-check-label {
-                            font-family: font(secundaria);
-                            color: color(terciario);
-                        }
-
-                        .btn {
-                            @include btn-formularios (color(terciario), 1.5em, color(texto-light));
-
-                        }
-
-                    }
-
-                    div {
-                        p {
-                            font-family: font(secundaria);
-                            font-size: 1.1em;
-                            color: color(terciario);
-
-                            a {
-                                font-weight: 600;
-                                color: color(secundario);
-
-                            }
-                        }
-                    }
-
-
-                }
-
-            }
-        }
+       @include estiloModal;
     }
 
     //BIENVENIDA
@@ -1309,20 +1421,20 @@ h1 {
             height: 315px;
             border-radius: $radius*3;
             border: color(componente-primario) solid 10px;
-            
+
         }
     }
-    
-    
-    .contenedorMedidas{
+
+
+    .contenedorMedidas {
         margin-bottom: 100px;
 
-        .medidas{
+        .medidas {
             margin-bottom: 4em;
         }
     }
 
-    
+
     .contenedorGaleria {
         text-align: center;
 
@@ -1333,8 +1445,8 @@ h1 {
             margin-bottom: 2%;
         }
     }
-    
-    
+
+
     .filtroGaleria {
         display: inline-block;
         width: 45%;
@@ -1347,27 +1459,27 @@ h1 {
             padding-left: 25%;
         }
 
-        select{
+        select {
             font-size: 11pt;
             padding-left: 1%;
         }
     }
-    
+
     .resultadosGaleria {
         display: block;
         text-align: left;
         font-size: 12pt;
         margin: 0px 0px 5% 5%;
     }
-    
-    .galeria{
+
+    .galeria {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
 
-        grid-template-areas: "item" "item" "item"
-        "item""item""item"
-        "item""item""item" ;
+        grid-template-areas: "item""item""item"
+            "item""item""item"
+            "item""item""item";
 
         grid-row-gap: 2em;
         margin: 0 4em;
@@ -1388,31 +1500,88 @@ h1 {
                 width: 100%;
                 transition: 0.5s;
             }
-    
-            p{
+
+            p {
                 margin: 0%;
                 padding: 1% 10%;
             }
-    
-            .precioItem{
+
+            .precioItem {
                 font-size: 2em;
                 font-weight: bold;
             }
         }
 
-        &:hover{
+        &:hover {
             box-shadow: $shadow;
             width: 80%;
         }
-        
-        
+
+
     }
-    
 
-    
 
-    
+    //XL NOVEDADES
 
-    
-    
+    .contenedorNovedades {
+        padding: 2em 0 2em;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        .novedades {
+            margin: 1em 0;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+
+
+            div {
+                background-color: color(componente-primario);
+                width: 60%;
+                border-radius: $radius*3;
+            }
+
+
+            .card {
+                display: flex;
+                flex-direction: row;
+                width: 13rem;
+
+                img {
+                    border-radius: $radius*3 0 0 $radius*3;
+                }
+
+                .cardBodyNovedades {
+                    display: flex;
+                    flex-wrap: wrap;
+
+
+                    .cardNovedades {
+
+                        width: auto;
+
+                        .tituloNovedades {
+                            width: 10.5em;
+                            font-size: 2em;
+                        }
+                    }
+
+                    .cardLeerMas {
+                        display: flex;
+                        align-items: end;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    /*     .tituloNovedades {
+        width: 25em;
+    }
+ */
+
 }
