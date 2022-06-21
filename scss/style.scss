@@ -23,10 +23,10 @@
 
 @font-face {
     font-family: "Stanberry";
-    src: url(stanberry.ttf);
+    src: url(../fonts/stanberry.ttf);
 
     font-family: "corbel";
-    src: url(corbel.ttf);
+    src: url(../fonts/corbel.ttf);
 }
 
 //ESTILOS GENERALES (EG)
@@ -456,7 +456,7 @@ h1 {
 
 //SCREEN SM ----------------------------------
 
-@media screen and (min-width:$sm) and (max-width:767px) {
+/* @media screen and (min-width:$sm) and (max-width:767px) { */
 
 
     .grilla {
@@ -937,13 +937,6 @@ h1 {
             position: relative;
         }
 
-        .flechaFiltro {
-            display: inline-block;
-            height: 4em;
-            width: 8%;
-            position: absolute;
-            right: 23.5%;
-        }
     }
 
 
@@ -958,11 +951,12 @@ h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        
 
         .item {
-            width: 45%;
+            width: 47%;
             padding: 0px 0px 0.5em 0px;
-            margin: 0.5em;
+            margin: 0.5em 0.2em;
 
             a {
                 width: 100%;
@@ -1011,7 +1005,7 @@ h1 {
 
     }
 
-}
+/* } */
 
 
 
@@ -1051,37 +1045,49 @@ h1 {
         top: 0;
         z-index: 2;
         width: 100vw;
-        height: 13em;
+        height: 13.5em;
+        background-color: color(componente-primario);
     }
 
     // XL HEAD ENCABEZADO
 
     .encabezado {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px 0px 0px 0px;
-        width: 100vw;
-        height: 8em;
+        height: 100px; 
+        width: 100%;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 0.5fr, auto;
 
         #botonMenu {
             display: none;
+
         }
 
         .contenedorBotonMenu {
             display: none;
+           
         }
 
         .contentLogoEncabezado {
-            margin-left: 50px;
+            /* margin-left: 50px; */
+            grid-column: 1/2;
+            height: 100px;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+           
 
             .logoEncabezado {
-                height: 100px;
+                height: 90px;
+                margin-left: 3em;
             }
         }
 
         .contenedorBuscador {
+            width: 100%;
+            height: 100px;
+            grid-column: 2/3;
+            grid-row: 1/2;
 
             .buscador {
                 height: 40px;
@@ -1102,7 +1108,15 @@ h1 {
         }
 
         .iconosEncabezado {
-            margin-right: 50px;
+            /* margin-right: 50px; */
+            margin: 0;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            
 
             .fa-user {
                 color: color(terciario);
@@ -1115,6 +1129,7 @@ h1 {
                 color: color(terciario);
                 font-size: 30px;
                 padding: 10px;
+                margin-right: 1em;
 
             }
         }
@@ -1124,29 +1139,46 @@ h1 {
     //XL MENU
 
     .menu {
+        grid-row: 2/3;
+        grid-column: 2/4;
+        margin: 0;
         width: 100%;
-        height: 3.8em;
+        height: 3.5em;
         display: flex;
         justify-content: center;
+        align-items: center;
         border-top: color(componente-secundario) solid 2px;
+        transition: none;
 
         ul {
             display: flex;
+            flex-direction: row;
             justify-content: center;
+            text-align: center;
             width: 100%;
+            margin: 0;
 
             li {
                 display: inline-block;
+                width: 9.5em;
+                height: 3em;
+                position: relative;
+                
+
 
                 a {
                     display: block;
-                    padding: 12px 20px;
+                    position: absolute;
+                    top: 0;
+                    
+                    /* padding: 12px 20px; */
                 }
 
                 ul {
                     display: flex;
                     flex-direction: column;
-                    position: absolute;
+                    left: 0;
+                    top: 3em;
                     background: color(componente-primario);
                     width: 180px;
                     display: none;
@@ -1199,7 +1231,7 @@ h1 {
 
                 a {
                     input {
-                        height: 300px;
+                        width: 300px;
                         border-radius: $radius*4;
                     }
                 }
@@ -1436,30 +1468,35 @@ h1 {
 
 
     .contenedorGaleria {
-        text-align: center;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
 
         h2 {
             @include titulo-subtitulos(font(secundaria), 20pt, none, color(terciario), start);
             display: inline-block;
             width: 45%;
-            margin-bottom: 2%;
+            padding: 1.5em 0px;
         }
     }
 
 
     .filtroGaleria {
-        display: inline-block;
+        display: flex;
         width: 45%;
         position: relative;
+        align-items: center;
 
         label {
             display: inline-block;
             font-size: 12pt;
-            margin: 3%;
-            padding-left: 25%;
+            margin: 1%;
+            padding-left: 50%;
+            height: 2em;
         }
 
         select {
+            width: 70%;
             font-size: 11pt;
             padding-left: 1%;
         }
@@ -1474,51 +1511,55 @@ h1 {
 
     .galeria {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto; 
+        grid-template-columns: auto auto auto;
 
         grid-template-areas: "item""item""item"
             "item""item""item"
             "item""item""item";
-
+        justify-content: center;
         grid-row-gap: 2em;
         margin: 0 4em;
+
+        .item {
+            grid-area: "item";
+            width: 60%;
+            height: auto;
+            margin: auto;
+            padding: 0px 0px 0.5em 0px;
+            transition: 0.5s;
+    
+            a {
+                font-size: 16pt;
+    
+                img {
+                    width:100%;
+                    transition: 0.5s;
+                }
+    
+                p {
+                    margin: 0%;
+                    padding: 1% 10%;
+                }
+    
+                .precioItem {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+            }
+    
+            &:hover {
+                box-shadow: $shadow;
+                width: 80%;
+            }
+    
+    
+        }
     }
 
 
-    .item {
-        grid-area: "item";
-        width: 60%;
-        margin: auto;
-        padding: 0px 0px 0.5em 0px;
-        transition: 0.5s;
 
-        a {
-            font-size: 16pt;
-
-            img {
-                width: 100%;
-                transition: 0.5s;
-            }
-
-            p {
-                margin: 0%;
-                padding: 1% 10%;
-            }
-
-            .precioItem {
-                font-size: 2em;
-                font-weight: bold;
-            }
-        }
-
-        &:hover {
-            box-shadow: $shadow;
-            width: 80%;
-        }
-
-
-    }
+   
 
 
     //XL NOVEDADES
@@ -1541,6 +1582,7 @@ h1 {
                 background-color: color(componente-primario);
                 width: 60%;
                 border-radius: $radius*3;
+                justify-content: start;
             }
 
 
@@ -1548,6 +1590,7 @@ h1 {
                 display: flex;
                 flex-direction: row;
                 width: 13rem;
+                margin: 0;
 
                 img {
                     border-radius: $radius*3 0 0 $radius*3;
