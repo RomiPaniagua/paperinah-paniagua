@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Stanberry";
+  font-family: "stanberry";
   src: url(../fonts/stanberry.ttf);
   font-family: "corbel";
   src: url(../fonts/corbel.ttf); }
@@ -33,14 +33,16 @@
 /* Function Tipografías */
 .estiloNoticias, .noticias {
   background-color: #fe76a6;
-  height: 40px;
+  height: auto;
   width: 100vw;
   overflow: hidden;
   text-align: center;
-  padding-top: 0.5em;
+  padding: 0.5em 0;
   margin: auto; }
   .estiloNoticias ul, .noticias ul {
+    height: auto;
     display: flex;
+    margin: auto;
     padding: 0;
     width: 300%;
     animation: slideNoticias 12s infinite alternate ease-in-out; }
@@ -50,8 +52,9 @@
       font-family: "corbel";
       font-weight: bold;
       font-style: italic;
-      font-size: 14pt;
-      width: 100vw; }
+      font-size: 10pt;
+      width: 100vw;
+      padding: 0 2em; }
 
 .estiloEncabezado, .encabezado {
   background-color: white; }
@@ -90,10 +93,10 @@
   box-sizing: border-box; }
 
 @font-face {
-  font-family: "Stanberry";
-  src: url(../fonts/stanberry.ttf);
+  font-family: "stanberry";
+  src: local("stanberry"), url(stanberry.ttf);
   font-family: "corbel";
-  src: url(../fonts/corbel.ttf); }
+  src: local("corbel"), url(corbel.ttf); }
 
 body {
   width: 100vw; }
@@ -143,7 +146,7 @@ body {
   background-color: #b24aa6;
   height: 300px; }
   .contenedorNewsletter .infoNewsletter div h3 {
-    font-family: "stanberry";
+    font-family: "Patrick Hand";
     font-size: none;
     font-weight: none;
     color: white;
@@ -177,9 +180,10 @@ footer {
     text-align: center; }
 
 h1 {
-  font-family: "stanberry";
+  font-family: "Patrick Hand";
   color: grey;
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1em; }
 
 .bievenida p {
   background-color: #fe76a6;
@@ -316,7 +320,7 @@ h1 {
   .contenedorNovedades .novedades .card img {
     background-color: #fe76a6; }
   .contenedorNovedades .novedades .card h5 {
-    font-family: "stanberry";
+    font-family: "Patrick Hand";
     font-size: none;
     font-weight: bolder;
     color: #54252e;
@@ -689,7 +693,7 @@ header {
 
 h1 {
   text-align: center;
-  padding: 1em 0px 0.5em 0px; }
+  padding: 1em 1em 0.5em 1em; }
 
 .bievenida {
   margin: 0px 0px 5em 0px;
@@ -814,7 +818,6 @@ h1 {
       .contenedorNovedades .novedades .card img {
         border-radius: 15px 15px 0 0; }
 
-/* } */
 @media screen and (min-width: 1200px) {
   .grilla {
     display: grid;
@@ -834,6 +837,8 @@ h1 {
     width: 100vw;
     height: 13.5em;
     background-color: white; }
+    header .noticias ul li {
+      font-size: 14pt; }
   .encabezado {
     padding: 10px 0px 0px 0px;
     height: 100px;
@@ -939,7 +944,7 @@ h1 {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "categoria" "categoria" "categoria" "categoria" "categoria" "categoria";
+    grid-template-areas: "categoria" "categoria" "categoria" "categoria" "categoria" "categoria";
     margin: 0 5em; }
     .contenedorCategorias .imagenesCategoria .imgCateg {
       grid-area: "categoria";
@@ -1054,7 +1059,7 @@ h1 {
         font-weight: 600;
         color: #b24aa6; }
   h1 {
-    font-size: 25pt;
+    font-size: 2.5em;
     text-align: center;
     padding: 30px 0px; }
   .bievenida {

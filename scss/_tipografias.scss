@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Stanberry";
+    font-family: "stanberry";
     src: url(../fonts/stanberry.ttf);
 
     font-family: "corbel";
@@ -8,7 +8,7 @@
 
 //Tipografías
 
-$typo-principal:"stanberry";
+$typo-principal:"Patrick Hand", cursive;
 $typo-secundaria:"corbel";
 
-$typo:(principal:"stanberry", secundaria:"corbel");
+$typo:(principal:"Patrick Hand", secundaria:"corbel");

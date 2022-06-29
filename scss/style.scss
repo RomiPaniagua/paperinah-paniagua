@@ -22,11 +22,13 @@
 }
 
 @font-face {
-    font-family: "Stanberry";
-    src: url(../fonts/stanberry.ttf);
+    font-family: "stanberry";
+    src: local("stanberry"),
+        url(stanberry.ttf);
 
     font-family: "corbel";
-    src: url(../fonts/corbel.ttf);
+    src: local("corbel"),
+        url(corbel.ttf);
 }
 
 //ESTILOS GENERALES (EG)
@@ -175,6 +177,7 @@ h1 {
     font-family: font(principal);
     color: color(terciario);
     font-size: 2em;
+    line-height: 1em;
 }
 
 .bievenida {
@@ -459,553 +462,549 @@ h1 {
 /* @media screen and (min-width:$sm) and (max-width:767px) { */
 
 
-    .grilla {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-        gap: 0px 0px;
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0px 0px;
 
-        grid-template-areas: "header"
-            "main"
-            "footer";
-    }
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
 
-    header {
-        grid-area: header;
-    }
+header {
+    grid-area: header;
+}
 
-    main {
-        grid-area: main;
-    }
+main {
+    grid-area: main;
+}
 
-    footer {
-        grid-area: footer;
-    }
+footer {
+    grid-area: footer;
+}
 
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        width: 100vw;
-    }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100vw;
+}
 
 
-    //SM INDEX
+//SM INDEX
 
-    //SM HEAD ENCABEZADO
+//SM HEAD ENCABEZADO
 
-    .encabezado {
-        padding-top: 1rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 60%, 40%;
-        gap: 10px;
-        height: 200px;
-        width: 100vw;
+.encabezado {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60%, 40%;
+    gap: 10px;
+    height: 200px;
+    width: 100vw;
 
-        #botonMenu {
-            display: none;
+    #botonMenu {
+        display: none;
 
-            &:checked~.menu {
-                position: absolute;
-                top: 10em;
-                margin-left: 1em;
-            }
-
-        }
-
-        .contenedorBotonMenu {
-            grid-column: 1/2;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+        &:checked~.menu {
+            position: absolute;
+            top: 10em;
             margin-left: 1em;
-
-            .fa-bars {
-                color: color(terciario);
-                font-size: 30px;
-                padding: 0.5em;
-                border-radius: $radius;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: color(primario);
-                    color: color(componente-primario);
-                }
-            }
         }
 
-        .contentLogoEncabezado {
+    }
+
+    .contenedorBotonMenu {
+        grid-column: 1/2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 1em;
+
+        .fa-bars {
+            color: color(terciario);
+            font-size: 30px;
+            padding: 0.5em;
+            border-radius: $radius;
+            cursor: pointer;
+
+            &:hover {
+                background-color: color(primario);
+                color: color(componente-primario);
+            }
+        }
+    }
+
+    .contentLogoEncabezado {
+        width: 100%;
+        grid-column: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logoEncabezado {
+            height: 100px;
+        }
+    }
+
+    .contenedorBuscador {
+        width: 100vw;
+        grid-area: 2/1/3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .buscador {
+            width: 90%;
+
+            .fa-magnifying-glass {
+                color: color(terciario);
+                margin-left: 20px;
+            }
+
+            .ingresarBusqueda {
+                font-size: 12pt;
+                border-style: none;
+                background: none;
+                margin: 10px;
+            }
+        }
+    }
+
+    .iconosEncabezado {
+        grid-column: 3/4;
+        margin-right: 1em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .fa-user {
+            color: color(terciario);
+            font-size: 25px;
+            padding: 0.5em;
+        }
+
+        .fa-bag-shopping {
+            color: color(terciario);
+            font-size: 25px;
+        }
+    }
+
+
+
+}
+
+
+//SM HEAD MENU
+
+.menu {
+    position: absolute;
+    top: 10em;
+    border: none;
+    margin-left: -70%;
+    transition: all 0.5s;
+    height: 275px;
+
+    ul {
+        flex-direction: column;
+        text-align: start;
+        padding: 0%;
+
+        li {
             width: 100%;
-            grid-column: 2/3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
-            .logoEncabezado {
-                height: 100px;
-            }
-        }
-
-        .contenedorBuscador {
-            width: 100vw;
-            grid-area: 2/1/3/4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .buscador {
-                width: 90%;
-
-                .fa-magnifying-glass {
-                    color: color(terciario);
-                    margin-left: 20px;
-                }
-
-                .ingresarBusqueda {
-                    font-size: 12pt;
-                    border-style: none;
-                    background: none;
-                    margin: 10px;
-                }
-            }
-        }
-
-        .iconosEncabezado {
-            grid-column: 3/4;
-            margin-right: 1em;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-            .fa-user {
-                color: color(terciario);
-                font-size: 25px;
-                padding: 0.5em;
+            &:hover>ul {
+                display: block;
             }
 
-            .fa-bag-shopping {
-                color: color(terciario);
-                font-size: 25px;
-            }
-        }
-
-
-
-    }
-
-
-    //SM HEAD MENU
-
-    .menu {
-        position: absolute;
-        top: 10em;
-        border: none;
-        margin-left: -70%;
-        transition: all 0.5s;
-        height: 275px;
-
-        ul {
-            flex-direction: column;
-            text-align: start;
-            padding: 0%;
-
-            li {
+            a {
+                display: inline-block;
                 width: 100%;
-
-                &:hover>ul {
-                    display: block;
-                }
-
-                a {
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    padding: 0.5em 0.5em;
-                }
-
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    left: 8.5em;
-                    top: 7em;
-                    background: color(componente-primario);
-                    width: 100%px;
-                    display: none;
-                    z-index: 2;
-                    padding: 0%;
-
-                    li {
-                        a {
-                            padding: 0.5em 1.5em;
-
-                            &:hover {
-                                background: color(primario);
-                                width: 100%;
-                                border-radius: $radius;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    //SM MAIN CATEGORIAS
-
-    .contenedorCategorias {
-
-        h1 {
-            width: 100vw;
-            padding: 1.5em 0px 1em 0px;
-            margin: 0;
-        }
-
-        .imagenesCategoria {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: center;
-
-            .imgCateg {
-                margin: 0.5em;
-
-                a {
-                    input {
-                        width: 8.5em;
-                        border-radius: $radius*3;
-                    }
-                }
+                height: 100%;
+                padding: 0.5em 0.5em;
             }
 
-        }
-    }
+            ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 8.5em;
+                top: 7em;
+                background: color(componente-primario);
+                width: 100%px;
+                display: none;
+                z-index: 2;
+                padding: 0%;
 
-
-    //SM MAIN EXTRAS
-
-    .contenedorExtras {
-        h2 {
-            width: 100vw;
-            padding: 1.5em 0px 1em 0px;
-            margin: 0;
-        }
-
-        .dosExtras {
-            width: 100vw;
-            margin-bottom: 3em;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .extra {
-                padding: 0px 10px;
-                margin: 0px 0px 1.5em;
-                position: relative;
-
-                img {
-                    width: 15em;
-                    border-radius: $radius*4;
-                }
-
-                div {
-                    position: absolute;
-                    bottom: 7%;
-                    left: 50%;
-                    transform: translate(-50%, 0%);
-
+                li {
                     a {
-                        input {
-                            height: 50px;
-                            width: 7em;
-                            font-size: 16pt;
+                        padding: 0.5em 1.5em;
+
+                        &:hover {
+                            background: color(primario);
+                            width: 100%;
+                            border-radius: $radius;
                         }
                     }
                 }
             }
-
         }
     }
+}
 
-    //SM MAIN NEWSLETTER
+//SM MAIN CATEGORIAS
 
-    .contenedorNewsletter {
-        height: auto;
-        padding: 0.5em 0px 1em 0px;
-        margin-bottom: 5em;
-
-        .imgInfoNewsletter {
-            display: block;
-            text-align: center;
-
-            .imgNewsletter {
-                height: auto;
-                text-align: center;
-
-                img {
-                    height: 10em;
-                }
-            }
-
-            .infoNewsletter {
-
-                h3 {
-                    font-size: 2em;
-                    line-height: 1em;
-                }
-
-                p {
-                    font-size: 1.2em;
-                    margin: 0px 0.5em 0.3em 0.5em;
-                    line-height: 1em;
-                }
-            }
-        }
-
-        .formularioNewsletter {
-            text-align: center;
-            padding: 1em;
-
-            .ingresarEmail {
-                font-size: 1em;
-                height: 3em;
-                width: 18rem;
-                padding: 1em, 1em;
-                margin-bottom: 0.5em;
-               
-
-            }
-
-            .BotonInscribete {
-                height: 2.5em;
-                width: 18rem;
-                font-size: 1.1em;
-            }
-        }
-    }
-
-    //SM FOOTER COPYRIGHT
-
-    .copyright {
-        height: 3em;
-        font-size: 1.5;
-
-        p {
-            padding-top: 1em;
-        }
-    }
-
-    //SM MODAL
-
-    .modal {
-       @include estiloModal;
-    }
-
-    //BIENVENIDA
+.contenedorCategorias {
 
     h1 {
-        text-align: center;
-        padding: 1em 0px 0.5em 0px;
+        width: 100vw;
+        padding: 1.5em 0px 1em 0px;
+        margin: 0;
     }
 
-    .bievenida {
-        margin: 0px 0px 5em 0px;
-        height: auto;
-
-        .contenedorImagenBienvenida {
-            text-align: center;
-            margin: 0.5em 0px;
-
-            img {
-                height: 20em;
-            }
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1em;
-            padding: 2em 2em;
-            height: auto;
-
-            span {
-                font-size: 1.3em;
-                font-weight: 700;
-            }
-
-            .linkIlustradoraBienvenida {
-                font-size: x-large;
-            }
-        }
-    }
-
-    //SM CATEGORIA POLERAS
-
-    .infoPoleras {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: 1em 0px 1.5em 0px;
-
-        p {
-            font-size: 1.3em;
-            line-height: 1.1em;
-            text-align: left;
-            padding: 1.5em;
-        }
-
-        iframe {
-            width: 100%;
-            border: color(primario-light) solid 5px;
-            margin-bottom: 1em;
-        }
-    }
-
-    .contenedorMedidas {
-        height: auto;
-
-        .medidas {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: center;
-            align-items: center;
-
-            h2 {
-                width: 100%;
-                margin-bottom: 0.5em;
-                text-align: center;
-            }
-
-            img {
-                width: 20em;
-            }
-        }
-    }
-
-
-    // Tabla de medidas 
-
-    .medidas {
-        table {
-            margin-bottom: 3em;
-
-            td {
-                padding: 5px;
-                border-bottom: color(tabla-lineas) solid 3px;
-                text-align: center;
-            }
-        }
-    }
-
-
-    .tablaMujer {
-        width: 15em;
-
-        tr {
-            font-size: 0.5em;
-        }
-    }
-
-    // Galerìa 
-    .contenedorGaleria {
+    .imagenesCategoria {
         display: flex;
         flex-flow: wrap;
-        margin: 5em 0px;
+        justify-content: center;
 
-        h2 {
-            width: 100%;
-            text-align: center;
-        }
-    }
+        .imgCateg {
+            margin: 0.5em;
 
-
-
-    .filtroGaleria {
-        width: 100%;
-        height: auto;
-        padding: 1.5em 0px;
-        text-align: center;
-
-        label {
-            display: block;
-            width: 100%;
-            margin-bottom: 0.5em;
-        }
-
-        select {
-            display: inline-block;
-            height: 4em;
-            width: 50%;
-            position: relative;
+            a {
+                input {
+                    width: 8.5em;
+                    border-radius: $radius*3;
+                }
+            }
         }
 
     }
+}
 
 
+//SM MAIN EXTRAS
 
-    .resultadosGaleria {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1.5em;
+.contenedorExtras {
+    h2 {
+        width: 100vw;
+        padding: 1.5em 0px 1em 0px;
+        margin: 0;
     }
 
-    .galeria {
+    .dosExtras {
+        width: 100vw;
+        margin-bottom: 3em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        
 
-        .item {
-            width: 47%;
-            padding: 0px 0px 0.5em 0px;
-            margin: 0.5em 0.2em;
+        .extra {
+            padding: 0px 10px;
+            margin: 0px 0px 1.5em;
+            position: relative;
 
-            a {
+            img {
+                width: 15em;
+                border-radius: $radius*4;
+            }
+
+            div {
+                position: absolute;
+                bottom: 7%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+
+                a {
+                    input {
+                        height: 50px;
+                        width: 7em;
+                        font-size: 16pt;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//SM MAIN NEWSLETTER
+
+.contenedorNewsletter {
+    height: auto;
+    padding: 0.5em 0px 1em 0px;
+    margin-bottom: 5em;
+
+    .imgInfoNewsletter {
+        display: block;
+        text-align: center;
+
+        .imgNewsletter {
+            height: auto;
+            text-align: center;
+
+            img {
+                height: 10em;
+            }
+        }
+
+        .infoNewsletter {
+
+            h3 {
+                font-size: 2em;
+                line-height: 1em;
+            }
+
+            p {
+                font-size: 1.2em;
+                margin: 0px 0.5em 0.3em 0.5em;
+                line-height: 1em;
+            }
+        }
+    }
+
+    .formularioNewsletter {
+        text-align: center;
+        padding: 1em;
+
+        .ingresarEmail {
+            font-size: 1em;
+            height: 3em;
+            width: 18rem;
+            padding: 1em, 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .BotonInscribete {
+            height: 2.5em;
+            width: 18rem;
+            font-size: 1.1em;
+        }
+    }
+}
+
+//SM FOOTER COPYRIGHT
+
+.copyright {
+    height: 3em;
+    font-size: 1.5;
+
+    p {
+        padding-top: 1em;
+    }
+}
+
+//SM MODAL
+
+.modal {
+    @include estiloModal;
+}
+
+//BIENVENIDA
+
+h1 {
+    text-align: center;
+    padding: 1em 1em 0.5em 1em;
+}
+
+.bievenida {
+    margin: 0px 0px 5em 0px;
+    height: auto;
+
+    .contenedorImagenBienvenida {
+        text-align: center;
+        margin: 0.5em 0px;
+
+        img {
+            height: 20em;
+        }
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1em;
+        padding: 2em 2em;
+        height: auto;
+
+        span {
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+
+        .linkIlustradoraBienvenida {
+            font-size: x-large;
+        }
+    }
+}
+
+//SM CATEGORIA POLERAS
+
+.infoPoleras {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1em 0px 1.5em 0px;
+
+    p {
+        font-size: 1.3em;
+        line-height: 1.1em;
+        text-align: left;
+        padding: 1.5em;
+    }
+
+    iframe {
+        width: 100%;
+        border: color(primario-light) solid 5px;
+        margin-bottom: 1em;
+    }
+}
+
+.contenedorMedidas {
+    height: auto;
+
+    .medidas {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            width: 100%;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+
+        img {
+            width: 20em;
+        }
+    }
+}
+
+
+// Tabla de medidas 
+
+.medidas {
+    table {
+        margin-bottom: 3em;
+
+        td {
+            padding: 5px;
+            border-bottom: color(tabla-lineas) solid 3px;
+            text-align: center;
+        }
+    }
+}
+
+
+.tablaMujer {
+    width: 15em;
+
+    tr {
+        font-size: 0.5em;
+    }
+}
+
+// Galerìa 
+.contenedorGaleria {
+    display: flex;
+    flex-flow: wrap;
+    margin: 5em 0px;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+.filtroGaleria {
+    width: 100%;
+    height: auto;
+    padding: 1.5em 0px;
+    text-align: center;
+
+    label {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    select {
+        display: inline-block;
+        height: 4em;
+        width: 50%;
+        position: relative;
+    }
+
+}
+
+
+
+.resultadosGaleria {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .item {
+        width: 47%;
+        padding: 0px 0px 0.5em 0px;
+        margin: 0.5em 0.2em;
+
+        a {
+            width: 100%;
+            text-align: center;
+
+            img {
                 width: 100%;
-                text-align: center;
-
-                img {
-                    width: 100%;
-                    margin: auto;
-                }
-
-                p {
-                    display: inline-block;
-                    width: 90%;
-                    padding: 0.5em 0px 0px 0px;
-                    margin: auto;
-                    line-height: 18pt;
-                }
-
-                .precioItem {
-                    width: 85%;
-                    padding: 0%;
-                    margin: auto;
-                }
-            }
-        }
-    }
-
-    // SM NOVEDADES
-
-    .contenedorNovedades {
-        padding: 2em 0 2em 0;
-
-        .novedades {
-            margin: 2em 0 2em 0;
-
-            .card {
-                width: 18rem;
                 margin: auto;
-                border-radius: $radius*3;
+            }
 
-                img {
-                    border-radius: $radius*3 $radius*3 0 0;
-                }
+            p {
+                display: inline-block;
+                width: 90%;
+                padding: 0.5em 0px 0px 0px;
+                margin: auto;
+                line-height: 18pt;
+            }
+
+            .precioItem {
+                width: 85%;
+                padding: 0%;
+                margin: auto;
             }
         }
+    }
+}
 
+// SM NOVEDADES
+
+.contenedorNovedades {
+    padding: 2em 0 2em 0;
+
+    .novedades {
+        margin: 2em 0 2em 0;
+
+        .card {
+            width: 18rem;
+            margin: auto;
+            border-radius: $radius*3;
+
+            img {
+                border-radius: $radius*3 $radius*3 0 0;
+            }
+        }
     }
 
-/* } */
+}
 
 
 
@@ -1047,13 +1046,22 @@ h1 {
         width: 100vw;
         height: 13.5em;
         background-color: color(componente-primario);
+
+        .noticias{
+            ul{
+                li{
+                    font-size: 14pt;
+                }
+            }
+           
+        }
     }
 
     // XL HEAD ENCABEZADO
 
     .encabezado {
         padding: 10px 0px 0px 0px;
-        height: 100px; 
+        height: 100px;
         width: 100%;
         grid-template-columns: auto auto auto;
         grid-template-rows: 0.5fr, auto;
@@ -1065,7 +1073,7 @@ h1 {
 
         .contenedorBotonMenu {
             display: none;
-           
+
         }
 
         .contentLogoEncabezado {
@@ -1075,7 +1083,7 @@ h1 {
             width: 100%;
             justify-content: flex-start;
             align-items: center;
-           
+
 
             .logoEncabezado {
                 height: 90px;
@@ -1115,8 +1123,8 @@ h1 {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            
-            
+
+
 
             .fa-user {
                 color: color(terciario);
@@ -1163,14 +1171,14 @@ h1 {
                 width: 9.5em;
                 height: 3em;
                 position: relative;
-                
+
 
 
                 a {
                     display: block;
                     position: absolute;
                     top: 0;
-                    
+
                     /* padding: 12px 20px; */
                 }
 
@@ -1219,9 +1227,9 @@ h1 {
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
 
-            grid-template-areas: "categoria" "categoria" "categoria"
-            "categoria" "categoria" "categoria";
-            
+            grid-template-areas: "categoria""categoria""categoria"
+                "categoria""categoria""categoria";
+
             margin: 0 5em;
 
             .imgCateg {
@@ -1335,7 +1343,7 @@ h1 {
             width: 100%;
             padding: 0px 13em;
 
-            .ingresarEmail{
+            .ingresarEmail {
                 width: 75%;
                 margin-right: 0.5em;
             }
@@ -1360,13 +1368,13 @@ h1 {
     //XL MODAL
 
     .modal {
-       @include estiloModal;
+        @include estiloModal;
     }
 
     //BIENVENIDA
 
     h1 {
-        font-size: 25pt;
+        font-size: 2.5em;
         text-align: center;
         padding: 30px 0px;
     }
@@ -1511,7 +1519,7 @@ h1 {
 
     .galeria {
         display: grid;
-        grid-template-rows: auto auto auto; 
+        grid-template-rows: auto auto auto;
         grid-template-columns: auto auto auto;
 
         grid-template-areas: "item""item""item"
@@ -1528,38 +1536,38 @@ h1 {
             margin: auto;
             padding: 0px 0px 0.5em 0px;
             transition: 0.5s;
-    
+
             a {
                 font-size: 16pt;
-    
+
                 img {
-                    width:100%;
+                    width: 100%;
                     transition: 0.5s;
                 }
-    
+
                 p {
                     margin: 0%;
                     padding: 1% 10%;
                 }
-    
+
                 .precioItem {
                     font-size: 2em;
                     font-weight: bold;
                 }
             }
-    
+
             &:hover {
                 box-shadow: $shadow;
                 width: 80%;
             }
-    
-    
+
+
         }
     }
 
 
 
-   
+
 
 
     //XL NOVEDADES
