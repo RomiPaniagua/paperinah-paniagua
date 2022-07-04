@@ -185,6 +185,17 @@ h1 {
   font-size: 2em;
   line-height: 1em; }
 
+.breadcrumb {
+  list-style: none; }
+  .breadcrumb .breadcrumb-item {
+    font-family: "corbel";
+    color: grey; }
+    .breadcrumb .breadcrumb-item a {
+      text-decoration: none;
+      color: #b24aa6; }
+      .breadcrumb .breadcrumb-item a:link {
+        color: #b24aa6; }
+
 .bievenida p {
   background-color: #fe76a6;
   font-family: "corbel";
@@ -204,113 +215,8 @@ h1 {
 .infoPoleras iframe {
   border-radius: 15px; }
 
-.medidas h2 {
-  font-family: "corbel";
-  font-size: none;
-  font-weight: none;
-  color: grey;
-  text-align: center; }
-
 .medidas img {
   border-radius: 25px; }
-
-.medidas table {
-  background-color: bisque;
-  display: inline-block;
-  margin: 15px;
-  border-spacing: 0;
-  border: #54252e solid 5px;
-  border-radius: 15px;
-  font-family: "corbel";
-  font-size: 14pt; }
-  .medidas table tr {
-    width: 100%; }
-    .medidas table tr th {
-      padding: 10px;
-      border-bottom: #54252e solid 3px; }
-    .medidas table tr td {
-      padding: 5px;
-      border-bottom: #54252e solid 3px; }
-
-.contenedorGaleria h2 {
-  font-family: "corbel";
-  font-size: 20pt;
-  font-weight: bold;
-  color: grey;
-  text-align: center; }
-
-.filtroGaleria label {
-  font-family: "corbel";
-  font-size: 12pt;
-  font-style: italic;
-  color: grey; }
-
-.filtroGaleria select {
-  background-color: lightpink;
-  position: absolute;
-  height: 100%;
-  width: 30%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12pt;
-  font-weight: 600;
-  color: #54252e;
-  border-style: none;
-  border-radius: 5px;
-  padding-left: 3%;
-  outline: 0;
-  cursor: pointer;
-  appearance: none; }
-
-.filtroGaleria .flechaFiltro {
-  background-color: lightpink;
-  display: inline-block;
-  position: absolute;
-  height: 100%;
-  width: 8%;
-  right: 0%;
-  border-radius: 0px 5px 5px 0px;
-  pointer-events: none; }
-  .filtroGaleria .flechaFiltro .fa-chevron-down {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    color: white;
-    font-size: 20px; }
-
-.resultadosGaleria {
-  font-family: "corbel";
-  font-size: 12pt;
-  font-weight: 700;
-  color: grey;
-  text-align: start; }
-
-.item {
-  background-color: #efefef;
-  display: inline-block;
-  text-align: center;
-  border: #efefef solid 2px;
-  border-radius: 15px; }
-  .item a {
-    text-decoration: none;
-    font-family: "corbel";
-    font-size: 16pt;
-    color: #54252e; }
-    .item a img {
-      display: block;
-      border-radius: 15px 15px 0px 0px; }
-    .item a p {
-      display: inline-block;
-      width: 100%;
-      padding: 5% 1em;
-      font-weight: 500; }
-    .item a .precioItem {
-      display: block;
-      padding: 0%;
-      margin: 0%;
-      font-family: sans-serif;
-      font-size: 1.5em;
-      font-weight: bold; }
 
 .paginacion {
   margin-bottom: 5em; }
@@ -351,6 +257,11 @@ h1 {
 /* Contacto Información */
 .contenedorContacto {
   margin-bottom: 5em; }
+  .contenedorContacto .imgContacto img {
+    height: 10em; }
+    @media screen and (min-width: 1200px) {
+      .contenedorContacto .imgContacto img {
+        height: 15em; } }
   .contenedorContacto .contactoTexto h2 {
     font-family: "corbel";
     font-size: 1.5em;
@@ -461,7 +372,7 @@ footer {
   grid-area: footer; }
 
 header {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 20;
   width: 100vw; }
@@ -570,6 +481,9 @@ header {
             background: #fe76a6;
             width: 100%;
             border-radius: 5px; }
+
+.carousel .carousel-indicators {
+  display: none; }
 
 .contenedorCategorias h1 {
   width: 100vw;
@@ -696,7 +610,7 @@ h1 {
   padding: 1em 1em 0.5em 1em; }
 
 .bievenida {
-  margin: 0px 0px 5em 0px;
+  margin: 0px 0px 3em 0px;
   height: auto; }
   .bievenida .contenedorImagenBienvenida {
     text-align: center;
@@ -709,10 +623,24 @@ h1 {
     padding: 2em 2em;
     height: auto; }
     .bievenida p span {
-      font-size: 1.3em;
+      font-size: 1.4em;
+      line-height: 1.5em;
       font-weight: 700; }
     .bievenida p .linkIlustradoraBienvenida {
-      font-size: x-large; }
+      font-size: large; }
+
+.galeriaArtista {
+  margin: 0px 0px 5em 0px; }
+  .galeriaArtista h2 {
+    font-family: "Patrick Hand";
+    font-size: 1.5em;
+    font-weight: none;
+    color: grey;
+    text-align: center; }
+  .galeriaArtista .instaFeed a div img {
+    width: 250px;
+    border: solid 1px #9f9f9f;
+    border-radius: 10px; }
 
 .infoPoleras {
   display: flex;
@@ -741,18 +669,6 @@ h1 {
       text-align: center; }
     .contenedorMedidas .medidas img {
       width: 20em; }
-
-.medidas table {
-  margin-bottom: 3em; }
-  .medidas table td {
-    padding: 5px;
-    border-bottom: #54252e solid 3px;
-    text-align: center; }
-
-.tablaMujer {
-  width: 15em; }
-  .tablaMujer tr {
-    font-size: 0.5em; }
 
 .contenedorGaleria {
   display: flex;
@@ -827,7 +743,8 @@ h1 {
   header {
     grid-area: header; }
   main {
-    grid-area: main; }
+    grid-area: main;
+    width: 100vw; }
   footer {
     grid-area: footer; }
   header {
@@ -937,6 +854,19 @@ h1 {
               width: 180px; }
         .menu ul li:hover > ul {
           display: block; }
+  .carousel {
+    width: 100vw; }
+    .carousel .carousel-indicators {
+      display: flex; }
+      .carousel .carousel-indicators button {
+        height: 1.3em;
+        width: 1.3em;
+        border: 0;
+        border-radius: 25px; }
+    .carousel .carousel-control-prev {
+      width: 4em; }
+    .carousel .carousel-control-next {
+      width: 4em; }
   .contenedorCategorias h1 {
     padding: 100px 0px 20px 0px; }
   .contenedorCategorias .imagenesCategoria {
@@ -977,6 +907,7 @@ h1 {
           width: 200px;
           font-size: 16pt; }
   .contenedorNewsletter {
+    width: 100vw;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -1106,6 +1037,16 @@ h1 {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+  .galeriaArtista {
+    margin: 0px 0px 5em 0px; }
+    .galeriaArtista h2 {
+      font-size: 2em; }
+    .galeriaArtista .instaFeed a div {
+      width: 350px; }
+      .galeriaArtista .instaFeed a div img {
+        width: 350px;
+        border: solid 1px #9f9f9f;
+        border-radius: 10px; }
   .infoPoleras {
     background-color: #fe76a6;
     display: flex;
@@ -1154,9 +1095,9 @@ h1 {
       padding-left: 50%;
       height: 2em; }
     .filtroGaleria select {
-      width: 70%;
+      width: 75%;
       font-size: 11pt;
-      padding-left: 1%; }
+      padding-left: 1,5%; }
   .resultadosGaleria {
     display: block;
     text-align: left;

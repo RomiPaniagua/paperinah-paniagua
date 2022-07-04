@@ -25,7 +25,7 @@
             <div>
                 <ul>
                     <li>Noticias: Inauguramos nuestra tienda con un 15% dscto!!</li>
-                    <li>Ya abrimos nuestra sección Poleras</li>
+                    <li>Ya abrimos nuestra sección Poleras ¡¡Diseños exclusivos y originales!!</li>
                     <li>ENVIOS: Todos los Viernes - Tiempo estimado de entrega 5 días hábiles.</li>
                 </ul>
             </div>
@@ -121,12 +121,20 @@
     </div>
 
     <main>
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="container px-4 py-2 mx-xl-4">
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="../index.html#categorias">Categorías</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Poleras</li>
+            </ol>
+        </nav>
         <h1>POLERAS</h1>
         <!-- Info poleras -->
         <section class="contenedorPoleras">
             <div class="infoPoleras">
-                <p> Aquí encontrarás nuestras poleras exclusivas con fanarts de series, películas e ilustraciones originales. Todas 100% algodón, estampadas con impresión directa o DTG.</p>
-
+                <p> Aquí encontrarás nuestras poleras exclusivas con fanarts de series, películas e ilustraciones
+                    originales. Todas 100% algodón, estampadas con impresión directa o DTG.</p>
                 <!-- Video muestra de poleras -->
                 <div>
                     <iframe width="560" height="315" src="https://va.media.tumblr.com/tumblr_rcz9kvfi9w1rmjnfh_720.mp4"
@@ -136,96 +144,6 @@
                     </iframe>
                 </div>
             </div>
-            <!-- Tablas de medidas -->
-           <!--  <div class="container contenedorMedidas">
-                <div class="row">
-                    <div class="col-lg-12 d-flex flex-wrap align-items-lg-center medidas">
-                        <h2 class="col-lg-12 text-center">Medidas Mujer</h2>
-                        <div class="col-lg-6 text-end">
-                            <img src="../img/poleras/polera-medida-mujer.png" class="col-lg-7"
-                                alt="Medidas Polera Mujer">
-                        </div>
-                        <div class="col-lg-6">
-                            <table class="tablaMujer">
-                                <tr>
-                                    <th>TALLA</th>
-                                    <th>ANCHO 1</th>
-                                    <th>ANCHO 2</th>
-                                    <th>ANCHO 3</th>
-                                    <th>LARGO</th>
-                                </tr>
-                                <tr>
-                                    <td>S</td>
-                                    <td>41 cm</td>
-                                    <td>35 cm</td>
-                                    <td>41 cm</td>
-                                    <td>60 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>M</td>
-                                    <td>44 cm</td>
-                                    <td>38 cm</td>
-                                    <td>44 cm</td>
-                                    <td>62 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>L</td>
-                                    <td>43 cm</td>
-                                    <td>49 cm</td>
-                                    <td>44 cm</td>
-                                    <td>65 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>XL</td>
-                                    <td>54 cm</td>
-                                    <td>48 cm</td>
-                                    <td>54 cm</td>
-                                    <td>67 cm</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 d-flex flex-wrap align-items-lg-center medidas">
-                        <h2 class="col-lg-12 text-center">Medidas Hombre</h2>
-                        <div class="col-lg-6 text-end">
-                            <img src="../img/poleras/polera-medida-hombre.png" class="col-lg-7 alt=" Medidas Polera
-                                Hombre">
-                        </div>
-                        <div class="col-lg-6">
-                            <table>
-                                <tr>
-                                    <th>TALLA</th>
-                                    <th>ANCHO</th>
-                                    <th>LARGO</th>
-                                </tr>
-                                <tr>
-                                    <td>S</td>
-                                    <td>46 cm</td>
-                                    <td>70 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>M</td>
-                                    <td>51 cm</td>
-                                    <td>73 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>L</td>
-                                    <td>56 cm</td>
-                                    <td>76 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>XL</td>
-                                    <td>61 cm</td>
-                                    <td>78 cm</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div> -->
         </section>
         <!-- Galerìa de productos -->
         <section class="contenedorGaleria">
@@ -233,8 +151,8 @@
             <!-- Filtro -->
             <div class="filtroGaleria">
                 <label for="filtro">Filtrar por</label>
-                <select class="form-select " id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Más Vendidos</option>
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected> Más Vendidos</option>
                     <option value="1">Negro</option>
                     <option value="3">Blanco</option>
                 </select>
@@ -244,66 +162,73 @@
             <div class="galeria">
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/polera-hazbin-hotel-alastor.jpg" alt="polera 01">
-                        <p class="descripcionItem">Polera Alastor</p>
+                        <img src="../img/poleras/mockup/polera-hazbin-hotel-alastor.jpg"
+                            alt="Polera de personaje Alastor de serie Hazbin Hotel.">
+                        <p class="descripcionItem">Polera<br>Alastor</p>
                         <span class="precioItem">$17000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/polera-helluba-boss-loona.jpg" alt="polera 02">
-                        <p class="descripcionItem">Polera Loona</p>
+                        <img src="../img/poleras/mockup/polera-helluba-boss-loona.jpg"
+                            alt="Polera de personaje Loona de serie Helluba Boss.">
+                        <p class="descripcionItem">Polera<br>Loona</p>
                         <span class="precioItem">$17000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/polera-helluva-boss-blitzo-stolas.jpg" alt="polera 03">
-                        <p class="descripcionItem">Polera BlitzoxStolas</p>
+                        <img src="../img/poleras/mockup/polera-helluva-boss-blitzo-stolas.jpg"
+                            alt="Polera de personaje Blitzo y Stolas de serie Helluba Boss.">
+                        <p class="descripcionItem">Polera<br>BlitzoxStolas</p>
                         <span class="precioItem">$17000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/polera-final-space-avocato.jpg" alt="polera 04">
-                        <p class="descripcionItem">Polera Avocato</p>
+                        <img src="../img/poleras/mockup/polera-final-space-avocato.jpg"
+                            alt="Polera de personaje Avocato de serie Final Space.">
+                        <p class="descripcionItem">Polera<br>Avocato</p>
                         <span class="precioItem">$15000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/poleras-encanto-dolores.jpg" alt="polera 05">
-                        <p class="descripcionItem">Polera Encanto</p>
+                        <img src="../img/poleras/mockup/poleras-encanto-dolores.jpg"
+                            alt="Polera de personaje Dolores de película Encanto.">
+                        <p class="descripcionItem">Polera<br>Encanto</p>
                         <span class="precioItem">$15000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/polera-witch-bee.jpg" alt="polera 06">
-                        <p class="descripcionItem">Polera Witch Bee</p>
+                        <img src="../img/poleras/mockup/polera-witch-bee.jpg"
+                            alt="Polera de personaje original, una brujita abeja.">
+                        <p class="descripcionItem">Polera<br>Witch Bee</p>
                         <span class="precioItem">$15000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/mockup/polera-witch-fox.jpg" alt="polera 07">
-                        <p class="descripcionItem">Polera Witch Fox</p>
+                        <img src="../img/poleras/mockup/polera-witch-fox.jpg"
+                            alt="Polera de personaje original, una brujita zorro.">
+                        <p class="descripcionItem">Polera<br>Witch Fox</p>
                         <span class="precioItem">$15000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
                 <div class="item">
                     <a href="">
-                        <img src="../img/poleras/polera-muestra-02.png" alt="polera 08">
-                        <p class="descripcionItem">Pronto Nuevo Modelo!!</p>
+                        <img src="../img/poleras/polera-muestra-02.png" alt="Anuncio de nuevo modelo.">
+                        <p class="descripcionItem">Pronto Nuevo Modelo</p>
                         <span class="precioItem">$0000</span>
-                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR AL CARRO</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">AÑADIR A LA CESTA</button>
                     </a>
                 </div>
             </div>
@@ -331,7 +256,7 @@
                 <ul class="col-sm-4 d-flex justify-content-sm-center">
                     <div>
                         <h5>Conócenos</h5>
-                        <li>Sobre Paperhinah</li>
+                        <li>Sobre Paperinah</li>
                         <li>Inah Ilustradora</li>
                     </div>
 
